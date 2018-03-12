@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 #Adding by Sergowa
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails'
+gem 'devise', '~> 4.4', '>= 4.4.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
