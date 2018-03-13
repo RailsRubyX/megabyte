@@ -12,5 +12,54 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+							    /* цвет фона */
+body {
+	background-color: #ebebeb;
+}
+
+								/* цвет фона и рамки навигационного меню */
+.navbar-default {
+    background-color: #d8d8d8;
+    border-color: #E7E7E7;
+}
+
+.sticky-top {
+	position: sticky;
+}
+
+							/* цвет текста, содержащий название сайта или бренда */
+.navbar-default .navbar-header a{
+    font-size: 14pt;
+    color: #fafafa;
+}
+
+
+							/* Страничка О нас */
+.main-content {
+	.slogan h4{
+	  text-align: center;
+	 
+	}
+	.title {
+	  text-align: center;
+	} 
+}
+
+div.comanda{
+ margin:60px 0 0;
+ display:-webkit-flex;
+ flex-wrap:wrap;
+ justify-content:center
+}
+.comanda_person {
+ flex-basis:20%;
+ display:flex;
+ height:150px;
+ align-items:center;
+ justify-content:center
+}
+							/* Страничка О нас */
+
