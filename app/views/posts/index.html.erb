@@ -1,8 +1,11 @@
 <div class="container">
-	<% @posts.each do |post| %>
-		<div class="post_wrapper">
-			<h2><%= link_to post.title, post %></h2>
-			<p><%= post.body %></p>
-		</div>
-	<% end %>
+	<div class="post_wrapper">
+		<% @posts.each do |post| %>
+				<%= link_to post do %>
+					<%= image_tag post.image.url %>
+				<% end %>
+				<h4><%= link_to post.title, post %></h4>	
+				<p><%= post.body %></p>
+		<% end %>
+	</div>	
 </div>

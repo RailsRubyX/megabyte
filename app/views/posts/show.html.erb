@@ -1,5 +1,5 @@
 <div class="container">
-
+	<p><%= image_tag @post.image.url %></p>
 	<h1><%= @post.title %></h1>
 	
 	<% if user_signed_in? %>
@@ -8,4 +8,5 @@
 	<% end %>
 
 	<p><%= @post.body %></p>
+	
 </div>

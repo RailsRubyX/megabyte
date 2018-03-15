@@ -54,4 +54,7 @@ Rails.application.configure do
 
   # Devise needed (Sergowa)
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+   # Paperclip needed (Sergowa)
+  Paperclip.options[:command_path] = "/usr/bin/"
 end
