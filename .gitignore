@@ -21,6 +21,9 @@
 /config/secrets.yml
 /config/database.yml
 
+# Ignore images
+/public/system/posts/images
+
 /node_modules
 /yarn-error.log
 

@@ -2,7 +2,7 @@
 	<div class="post_wrapper">
 		<% @posts.each do |post| %>
 				<%= link_to post do %>
-					<%= image_tag post.image.url %>
+					<%= image_tag post.image.url(:medium) %>
 				<% end %>
 				<h4><%= link_to post.title, post %></h4>	
 				<p><%= post.body %></p>
