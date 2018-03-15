@@ -1,0 +1,18 @@
+<h3>Заказы за год</h3>
+<p></p>
+
+<table border="1">
+<tr bgcolor="lightgrey">
+	<td> Дата </td>
+	<td> № заказа </td>
+</tr
+
+<% @list.each do |row| %>
+
+<tr>
+	<td> <%= row["_Date_Time"].strftime("%Y.%m.%d") %> </td>
+	<td> <%= row["_Number"] %> </td>
+</tr
+
+<% end %>
+</table>
