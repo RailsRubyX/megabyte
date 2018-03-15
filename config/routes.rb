@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get 'cabinet/view'
   root "pages#index"
 
   get '/about', to: 'pages#about'
