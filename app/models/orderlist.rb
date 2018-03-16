@@ -12,20 +12,6 @@ class OrderList < ActiveRecord::Base
 		return @results
 =end
 
-@client = TinyTds::Client.new username: 'sa', password: 'cnfywbzvbh!1', host: '176.101.221.249', port: '15777', database: 'Megabyte'
-#@results = @client.execute("SELECT _Number, DATEADD(YEAR, -2000, _Date_Time) AS _Date_Time FROM _Document183 WHERE _Date_Time > '4018-01-01 00:00:00' ")
-
-@results = @client.execute("SELECT     DATEADD(YEAR, -2000, _Date_Time) AS _Date_Time, Megabyte.dbo._Document183._Number, Megabyte.dbo._Enum13249._EnumOrder AS Status,
-                      Megabyte.dbo._Reference120._Description AS Master, _Reference120_1._Description AS Manager, Megabyte.dbo._Document183._Fld3165 AS Summa
-FROM         Megabyte.dbo._Document183 LEFT OUTER JOIN
-                      Megabyte.dbo._Reference120 ON Megabyte.dbo._Document183._Fld13241RRef = Megabyte.dbo._Reference120._IDRRef LEFT OUTER JOIN
-                      Megabyte.dbo._Enum13249 ON Megabyte.dbo._Document183._Fld13250RRef = Megabyte.dbo._Enum13249._IDRRef LEFT OUTER JOIN
-                      Megabyte.dbo._Reference120 AS _Reference120_1 ON Megabyte.dbo._Document183._Fld13248RRef = _Reference120_1._IDRRef
-WHERE     (Megabyte.dbo._Document183._Date_Time > CONVERT(DATETIME, '4018-01-01 00:00:00', 102))")
-
-@result = @results.each
-@client.close
-return @result
 
 	end
 
