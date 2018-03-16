@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  
   devise_for :users
-  get 'cabinet/view'
+  
+  get 'orderlist', to: 'cabinet#view'
+  get 'singin', to: 'users#sign_in'
+
   resources :posts
   
   root "posts#index"
@@ -10,4 +14,5 @@ Rails.application.routes.draw do
   get '/pricelist', to: 'pages#pricelist'
   get '/clients', to: 'pages#clients'
   get '/service', to: 'pages#service'
+
 end
