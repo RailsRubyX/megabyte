@@ -1,11 +1,26 @@
-<div class="container">
-	<div class="post_wrapper">
-		<% @posts.each do |post| %>
-				<%= link_to post do %>
-					<%= image_tag post.image.url(:medium) %>
-				<% end %>
-				<h4><%= link_to post.title, post %></h4>	
-				<p><%= post.body %></p>
-		<% end %>
-	</div>	
-</div>
+<section class="blog-area single-padding"> 
+	<div class="container">
+		<div class="row">
+			<% @posts.each do |post| %>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="single-recent-news">
+						<div class="recent-news-img">
+							<%= link_to post do %>
+								<%= image_tag post.image.url(:thumb), class: "img-responsive img-thumbnail" %>
+							<% end %>
+						</div>
+						<div class="recent-news-desc">
+							<h4><%= link_to post.title, post %></h4>	
+							<div class="box">
+								<div>
+									<p><%= post.body %></p>
+								</div>
+							</div>
+							<%= link_to "Подробнее", post, class: "btn btn-sm btn-primary" %>
+						</div>
+					</div>
+				</div>	
+			<% end %>
+		</div>	
+	</div>
+</section>
