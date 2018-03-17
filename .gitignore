@@ -23,6 +23,7 @@
 
 # Ignore images
 /public/system/posts/images
+/Gemfile
 
 /node_modules
 /yarn-error.log
