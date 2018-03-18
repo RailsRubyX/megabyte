@@ -19,7 +19,7 @@
 							
 body {
 	background-color: #ebebeb;  /* цвет фона */
-	padding-top: 70px;          /* отступ для плавающего меню */
+	padding-top: 50px;          /* отступ для плавающего меню */
 	margin-bottom: 40px;
 }
 
@@ -195,8 +195,23 @@ div.service {
   position: relative;
   margin: 0 auto;
   width: 50%;
+  padding-top: 20px;
 }
 
 #post_body{
   height: 300px;
+}
+
+.blog-body {
+  p {
+    white-space: pre-wrap;
+    width: 75%;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+}
+
+.top-image{
+  margin-bottom: 30px;
 }
