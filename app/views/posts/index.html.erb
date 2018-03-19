@@ -1,5 +1,12 @@
 <div class="top-image">
 	<%= image_tag "top-image.jpg", class: "img-responsive" %>
+
+	<div class="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-info") %>
+      <% end %>
+    </div>
+	
 </div>
 
 <section class="blog-area single-padding"> 
