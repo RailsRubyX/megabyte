@@ -5,7 +5,8 @@ class CabinetController < ApplicationController
   def view
   	
  	if user_signed_in?
-		@list = OrderList.getlist
+ 		#byebug
+		@list = OrderList.getlist(current_user.id)
 	else
 		redirect_to new_user_session_path
 	end

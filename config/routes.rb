@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   
   get 'orderlist', to: 'cabinet#view'
-  get 'singin', to: 'users#sign_in'
-
+  
   resources :posts
   
   root "posts#index"
