@@ -26,7 +26,11 @@
 		<td align="center" width="20%"> <%= row["Manager"] %>  </td>
 		<td align="center" width="20%"> <%= row["Master"] %>  </td>
 		<td align="center" width="9%"> <%= row["Summa"] %>  </td>
+<<<<<<< HEAD
+		<td align="center" width="11%"> <a href="app/assets/Akt.pdf">Скачать Акт в PDF</a> </td>
+=======
 		<td align="center" width="11%"> <a href="assets/Akt.pdf">Скачать Акт в PDF</a> </td>
+>>>>>>> b2a2f70461c92abfbcaf6c9c98ce1d3e8a8667e2
 	</tr
 
 	<% end %>
