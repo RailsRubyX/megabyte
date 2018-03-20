@@ -21,32 +21,132 @@
 							   
 							
 body {
-	background-color: #ebebeb;  /* цвет фона */
-	padding-top: 50px;          /* отступ для плавающего меню */
 	margin-bottom: 40px;
 }
 
-								/* параметры для плавающего меню */
-:target:before { 
-  display: block; 
-  content: " "; 
-  margin-top: -70px; 
-  height: 70px; 
-  visibility: hidden; 
+
+
+
+                                                     /*Раздел Header*/
+
+.repair-header-top {
+    line-height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    .repair-col-logo {
+        position: relative;
+        .megabyte-logo {
+            line-height: 105px;
+            img {
+            vertical-align: middle !important;
+            }
+        }
+    }
+    
+    .repair-icon-box {
+        line-height: 19px;
+        margin-top: 15px;
+        padding-left: 35px;
+        position: relative;
+        margin-top: 32px;
+        
+        .icon-container {
+            font-size: 30px;
+            left: 0;
+            position: absolute;
+            top: 15%;
+        }
+        
+        .text {
+          font-size: 16px;
+          letter-spacing: .03px;
+            .head-heading{
+                font-size: 15px;
+                line-height: 20px;
+                display: block;
+            }
+            .head-content{
+                display: block;
+                font-weight: 600;
+                color: #1c73ff; 
+            }
+       }
+   }
+    
+    .btn-quote {
+        float: right;
+        margin-top: 32px;
+          .btn-request_quote{
+                font-weight: 600;
+                color: white;
+                text-align: center;
+                padding: 12px 14px;
+                background-color: #1c73ff;
+                &:hover{
+                    background: darken(black, 10%);
+                }
+
+            }
+        }  
 }
 
-								/* цвет фона и рамки навигационного меню */
+@media only screen and (min-width:991px) and (max-width: 1200px)  {
+    
+    .repair-header-top {
+
+        .repair-icon-box {
+            .icon-container {
+                font-size: 25px;
+            }
+            .text {
+              font-size: 13px;
+                .head-heading{
+                    font-size: 13px;
+                }
+           }
+       }
+        .btn-quote {
+              .btn-request_quote{
+                    font-size: 12px;
+                    padding: 12px 3px;
+                }
+            }
+
+    }
+}
+@media only screen and (max-width: 991px) {
+    
+    .repair-header-top {
+        .megabyte-logo {
+            text-align: center;
+            }
+    }
+}
+
+                /* цвет фона и рамки навигационного меню */
+.navbar{
+  margin:0;
+  border: none;
+  position:relative;
+  min-height:50px;
+  border-radius: 0;
+}
+
 .navbar-default {
-    background-color: #d8d8d8;
-    border-color: #E7E7E7;
+    background-color: #464c56;
 }
 
-								/* цвет текста, содержащий название сайта или бренда */
-.navbar-default .navbar-header a{
-    font-size: 14pt;
-    color: #fafafa;
-}
+#navbar-main {
+  .navbar-nav{
+    a{
+      color: white;
+    }
 
+    a:hover{
+    color: #1c73ff;
+    }
+  }
+}
 
 								/* Страничка О нас */
 .main-content {
@@ -215,11 +315,8 @@ div.service {
   }
 }
 
-.top-image{
+.carousel{
   margin-bottom: 30px;
-        .container{
-          margin-top: 10px;
-  }
 }
 
 .service {
@@ -233,4 +330,9 @@ div.service {
 .edit-registration {
   .row{
   margin-bottom: 50px;}
+}
+
+#user_adress {
+  height: 100px;
+  resize: none;
 }

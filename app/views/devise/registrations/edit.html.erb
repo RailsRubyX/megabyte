@@ -2,7 +2,7 @@
   <div class="col-md-4 col-md-offset-4">
       <div class="row">
         <div class="panel-heading text-center">
-          <h2>Edit <%= resource_name.to_s.humanize %></h2>
+          <h2>Редактирование аккаунта</h2>
         </div>  
 
 
@@ -10,7 +10,7 @@
       <%= devise_error_messages! %>
       
       <div class="form_group">
-        <%= f.label :name %><br />
+        <%= f.label :Меня_зовут %><br />
         <%= f.text_field :name, autofocus: true, class: "form-control" %>
       </div>
      <br>
@@ -20,47 +20,46 @@
       </div>
     <br>
       <div class="form_group">
-        <%= f.label :phone %><br />
+        <%= f.label :Мобильный_телефон %><br />
         <%= f.telephone_field :phone, autofocus: true, class: "form-control" %>
       </div>
     <br>
       <div class="form_group">
-        <%= f.label :adress %><br />
-        <%= f.telephone_field :adress, autofocus: true, class: "form-control" %>
+        <%= f.label :Адрес %><br />
+        <%= f.text_area :adress, autofocus: true, class: "blog-text-area form-control" %>
       </div>
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
     <br>
       <div class="form_group">
-        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+        <%= f.label :Новый_пароль %> <i>(Если не хотите менять пароль, оставьте поле пустым)</i><br />
         <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
         <% if @minimum_password_length %>
           
-          <em><%= @minimum_password_length %> characters minimum</em>
+          <em><%= @minimum_password_length %> символов минимум</em>
         <% end %>
       </div>
     <br>
       <div class="form_group">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label :Подтверждение_нового_пароля %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
       </div>
     <br>
       <div class="form_group">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+        <%= f.label :Текущий_пароль %> <i>(Введите текущий пароль для сохранения изменений)</i><br />
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
       </div>
     <br>
       <div class="actions">
-        <%= f.submit "Update", class: "btn btn-primary" %>
+        <%= f.submit "Обновить", class: "btn btn-danger" %>
+        <%= link_to "Назад", :back, class: "btn btn-primary"%>
       </div>
     <% end %>
 
-    <h3>Cancel my account</h3>
+    <h3>Удаление аккаунта</h3>
 
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), class: "btn btn-primary", data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-    <%= link_to "Back", :back %>
+    <%= button_to "Удалить аккаунт", registration_path(resource_name), class: "btn btn-primary", data: { confirm: "Are you sure?" }, method: :delete %>
     </div>
   </div>
 </div>

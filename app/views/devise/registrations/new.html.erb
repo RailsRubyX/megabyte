@@ -8,7 +8,7 @@
   <%= devise_error_messages! %>
 
  <div class="form_group">
-    <%= f.label :name %><br />
+    <%= f.label :Меня_зовут %><br />
     <%= f.text_field :name, placeholder: "Ф.И.О.", autofocus: true, class: "form-control" %>
   </div>
   <br>
@@ -18,30 +18,30 @@
   </div>
 <br>
 <div class="form_group">
-    <%= f.label :phone %><br />
+    <%= f.label :Мобильный_телефон %><br />
     <%= f.telephone_field :phone, placeholder: "Номер телефона (пример: 380971234567)", autofocus: true, class: "form-control" %>
   </div>
  <br> 
   <div class="form_group">
-    <%= f.label :password %>
+    <%= f.label :Пароль %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> символов минимум)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
   </div>
 <br>
   <div class="form_group">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :Подтверждение_пароля %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
   </div>
 <br>
 <div class="form_group">
-    <%= f.label :adress %><br />
-    <%= f.text_field :adress, placeholder: "Адрес", autofocus: true, class: "form-control" %>
+    <%= f.label :Адрес %><br />
+    <%= f.text_area :adress, placeholder: "Адрес", autofocus: true, class: "blog-text-area form-control" %>
   </div>
   <br>
   <div class="actions">
-    <%= f.submit "Sign up", class: "btn btn-primary" %>
+    <%= f.submit "Регистрация", class: "btn btn-primary" %>
   </div>
 <% end %>
 <br>
