@@ -7,11 +7,21 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+ <div class="form_group">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, placeholder: "Ф.И.О.", autofocus: true, class: "form-control" %>
+  </div>
+  <br>
   <div class="form_group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+    <%= f.email_field :email, placeholder: "Электронная почта", autofocus: true, autocomplete: "email", class: "form-control" %>
   </div>
 <br>
+<div class="form_group">
+    <%= f.label :phone %><br />
+    <%= f.telephone_field :phone, placeholder: "Номер телефона (пример: 380971234567)", autofocus: true, class: "form-control" %>
+  </div>
+ <br> 
   <div class="form_group">
     <%= f.label :password %>
     <% if @minimum_password_length %>
@@ -25,6 +35,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
   </div>
 <br>
+<div class="form_group">
+    <%= f.label :adress %><br />
+    <%= f.text_field :adress, placeholder: "Адрес", autofocus: true, class: "form-control" %>
+  </div>
+  <br>
   <div class="actions">
     <%= f.submit "Sign up", class: "btn btn-primary" %>
   </div>
