@@ -68,7 +68,7 @@ body {
             .head-content{
                 display: block;
                 font-weight: 600;
-                color: #1c73ff; 
+                color: #2196F3; 
             }
        }
    }
@@ -81,7 +81,7 @@ body {
                 color: white;
                 text-align: center;
                 padding: 12px 14px;
-                background-color: #1c73ff;
+                background-color: #2196F3;
                 &:hover{
                     background: darken(black, 10%);
                 }
@@ -133,7 +133,7 @@ body {
 }
 
 .navbar-default {
-    background-color: #464c56;
+    background-color: #1D1D1D;
 }
 
 #navbar-main {
@@ -146,14 +146,16 @@ body {
     color: #1c73ff;
     }
   }
+  .dropdown-menu{
+    a{
+      color: black;
+    }
+  }
 }
 
 								/* Страничка О нас */
 .main-content {
-	h4{
-	  text-align: center;
-	 
-	}
+  padding-top: 20px;
 	.title {
 	  text-align: center;
 	} 
@@ -193,7 +195,8 @@ footer {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 40px;
-  background-color: #f5f5f5;
+  background-color: #1D1D1D;
+  color: white;
   p {
   	margin-top: 10px;
   }
@@ -230,36 +233,8 @@ div.service {
     line-height: 25px;
 }
 
-.box::before {
-    content: "";
-    float: left;
-    width: 5px;
-    height: 200px;
-}
 
-.box > *:first-child {
-    float: right;
-    width: 100%;
-    margin-left: -5px;
-}   
-
-.box::after {
-    content: "\02026";
-    box-sizing: content-box;
-    float: right;
-    position: relative;
-    top: -25px;
-    left: 100%; 
-    width: 3em;
-    margin-left: -3em;
-    padding-right: 5px; 
-    text-align: right;
-    background-size: 100% 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #ebebeb 50%, #ebebeb);
-}
                                          /*Обрезка текста блога и троеточие в конце*/
-
-
 
 
 .recent-news-desc h4 a:hover{
@@ -278,7 +253,7 @@ div.service {
     font-weight: 700;
 }
 .recent-news-desc h4::before {
-    background: #ed1556 none repeat scroll 0 0;
+    background: #2196F3 none repeat scroll 0 0;
     bottom: 0;
     content: "";
     height: 1px;
@@ -291,6 +266,53 @@ div.service {
 .recent-news-desc {
   margin-bottom: 21px;
 }
+
+.blog-title-index {
+  margin-bottom: 20px;
+  h1 {
+    height: 30px;
+    display: block;
+    font-size: 20px;
+    position: relative;
+    text-transform: none;
+    font-weight: 700;
+    }
+}
+
+.blog-title-index h1::before {
+   background: #2196F3 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left: -22px;
+    position: absolute;
+    width: 44px;
+}
+
+.title-pages {
+  margin-bottom: 20px;
+  h3 {
+    height: 30px;
+    display: block;
+    font-size: 20px;
+    position: relative;
+    text-transform: none;
+    font-weight: 700;
+    }
+}
+
+.title-pages h3::before {
+   background: #2196F3 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left: -22px;
+    position: absolute;
+    width: 44px;
+}
+
 
 .blog-img {
   display: block;
@@ -327,7 +349,16 @@ div.service {
   padding-top: 20px;
 }
 
+.orders {
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
 .edit-registration {
+  .row{
+  margin-bottom: 50px;}
+}
+.new-registration { 
   .row{
   margin-bottom: 50px;}
 }
