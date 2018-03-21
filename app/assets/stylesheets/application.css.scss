@@ -354,6 +354,11 @@ div.service {
   margin-bottom: 50px;
 }
 
+.contacts {
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
 .edit-registration {
   .row{
   margin-bottom: 50px;}
@@ -366,4 +371,34 @@ div.service {
 #user_adress {
   height: 100px;
   resize: none;
+}
+
+
+.location-class {
+        line-height: 19px;
+        margin-top: 15px;
+        padding-left: 35px;
+        position: relative;
+        margin-top: 32px;
+        .icon-container {
+            font-size: 30px;
+            left: 0;
+            position: absolute;
+            top: 10%;
+        }
+        
+        .text {
+          font-size: 16px;
+          letter-spacing: .03px;
+            .head-heading{
+                font-size: 15px;
+                line-height: 20px;
+                display: block;
+            }
+            .head-content{
+                display: block;
+                font-weight: 600;
+                color: #2196F3; 
+            }
+       }
 }
