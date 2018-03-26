@@ -1,0 +1,15 @@
+<%# byebug %>
+	<div class="row-det">
+
+<% @details.each do |row_det|%>
+			<%# byebug %>
+			<div class="list_line-d">
+
+				<div class="list_column">	</div>
+				<div class="list_column"><%= row_det["Usluga"] %>  </div>
+				<div class="list_column"><%= row_det["Kol"] %>  </div>
+				<div class="list_column"><%= row_det["Summa"] %>  </div>
+				
+			</div>
+<% end %>
+	</div>

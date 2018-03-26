@@ -1,0 +1,34 @@
+// Place all the styles related to the Cabinet controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+//.row{overflow:hidden;width:200px}
+//.order_line{white-space:nowrap}
+//.order_line div{width:90px;display:inline-block;}
+
+.row-t{
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.row-det{
+  display: table;
+  width: 100%;
+}
+
+.list_line {display: table-row;}
+
+.list_line_even {display: table-row; background: #e0f8f8;}
+
+.list_line_odd {display: table-row; background: #ffffff;}
+
+.list_column{
+  display: table-cell;
+  text-align: center;
+  border: none;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}

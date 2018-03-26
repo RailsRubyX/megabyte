@@ -1,0 +1,12 @@
+
+$('#<%=params[:cabinet_id]%>').toggle()
+
+$('#<%=params[:cabinet_id]%>').html("<%= escape_javascript render("details") %>");
+
+//if ($element.is(':visible')) {
+    // $element виден
+//}
+
+//if ($element.is(':hidden')) {
+    // $element не виден
+//}
