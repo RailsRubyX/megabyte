@@ -1,16 +1,69 @@
-<div class="top-image">
-	<%= image_tag "top-image.jpg", class: "img-responsive" %>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-	<div class="container">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag "carusel1.jpg", class: "img-responsive" %>
+       <div class="carousel-caption">
+        <h1>Быстрый и качественный ремонт</h1>
+        <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag "carusel2.jpg", class: "img-responsive" %>
+       <div class="carousel-caption">
+        <h1>Любой лозунг может быть</h1>
+        <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag "carusel3.jpg", class: "img-responsive" %>
+       <div class="carousel-caption">
+        <h1>Текст другого размера может быть</h1>
+        <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<div class="container">
       <% flash.each do |name, msg| %>
         <%= content_tag(:div, msg, class: "alert alert-info") %>
       <% end %>
-    </div>
-	
 </div>
+	
+
+
 
 <section class="blog-area single-padding"> 
-	<div class="container">
+	<div class="container animated" style="visibility: visible; animation-name: fadeInUp;">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="blog-title-index text-center">
+          <h1>Почему выбирают нас?</h1>
+          <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
+        </div>
+      </div>
+    </div>
 		<div class="row">
 			<% @posts.each do |post| %>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -25,6 +78,7 @@
 							<div class="box">
 								<div>
 									<p><%= post.body %></p>
+                  <script src="jquery.dotdotdot.min.js"></script>
 								</div>
 							</div>
 							<%= link_to "Подробнее", post, class: "btn btn-sm btn-primary" %>
@@ -35,3 +89,9 @@
 		</div>	
 	</div>
 </section>
+
+<script>
+$(function(){
+  $('.box').dotdotdot();
+});
+</script>

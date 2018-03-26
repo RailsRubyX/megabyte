@@ -21,39 +21,141 @@
 							   
 							
 body {
-	background-color: #ebebeb;  /* цвет фона */
-	padding-top: 50px;          /* отступ для плавающего меню */
 	margin-bottom: 40px;
 }
 
-								/* параметры для плавающего меню */
-:target:before { 
-  display: block; 
-  content: " "; 
-  margin-top: -70px; 
-  height: 70px; 
-  visibility: hidden; 
+
+
+
+                                                     /*Раздел Header*/
+
+.repair-header-top {
+    line-height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    .repair-col-logo {
+        position: relative;
+        .megabyte-logo {
+            line-height: 105px;
+            img {
+            vertical-align: middle !important;
+            }
+        }
+    }
+    
+    .repair-icon-box {
+        line-height: 19px;
+        margin-top: 15px;
+        padding-left: 35px;
+        position: relative;
+        margin-top: 32px;
+        
+        .icon-container {
+            font-size: 30px;
+            left: 0;
+            position: absolute;
+            top: 15%;
+        }
+        
+        .text {
+          font-size: 16px;
+          letter-spacing: .03px;
+            .head-heading{
+                font-size: 15px;
+                line-height: 20px;
+                display: block;
+            }
+            .head-content{
+                display: block;
+                font-weight: 600;
+                color: #2196F3; 
+            }
+       }
+   }
+    
+    .btn-quote {
+        float: right;
+        margin-top: 32px;
+          .btn-request_quote{
+                font-weight: 600;
+                color: white;
+                text-align: center;
+                padding: 12px 14px;
+                background-color: #2196F3;
+                &:hover{
+                    background: darken(black, 10%);
+                }
+
+            }
+        }  
 }
 
-								/* цвет фона и рамки навигационного меню */
+@media only screen and (min-width:991px) and (max-width: 1200px)  {
+    
+    .repair-header-top {
+
+        .repair-icon-box {
+            .icon-container {
+                font-size: 25px;
+            }
+            .text {
+              font-size: 13px;
+                .head-heading{
+                    font-size: 13px;
+                }
+           }
+       }
+        .btn-quote {
+              .btn-request_quote{
+                    font-size: 12px;
+                    padding: 12px 3px;
+                }
+            }
+
+    }
+}
+@media only screen and (max-width: 991px) {
+    
+    .repair-header-top {
+        .megabyte-logo {
+            text-align: center;
+            }
+    }
+}
+
+                /* цвет фона и рамки навигационного меню */
+.navbar{
+  margin:0;
+  border: none;
+  position:relative;
+  min-height:50px;
+  border-radius: 0;
+}
+
 .navbar-default {
-    background-color: #d8d8d8;
-    border-color: #E7E7E7;
+    background-color: #1D1D1D;
 }
 
-								/* цвет текста, содержащий название сайта или бренда */
-.navbar-default .navbar-header a{
-    font-size: 14pt;
-    color: #fafafa;
-}
+#navbar-main {
+  .navbar-nav{
+    a{
+      color: white;
+    }
 
+    a:hover{
+    color: #1c73ff;
+    }
+  }
+  .dropdown-menu{
+    a{
+      color: black;
+    }
+  }
+}
 
 								/* Страничка О нас */
 .main-content {
-	h4{
-	  text-align: center;
-	 
-	}
+  padding-top: 20px;
 	.title {
 	  text-align: center;
 	} 
@@ -93,7 +195,8 @@ footer {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 40px;
-  background-color: #f5f5f5;
+  background-color: #1D1D1D;
+  color: white;
   p {
   	margin-top: 10px;
   }
@@ -130,36 +233,8 @@ div.service {
     line-height: 25px;
 }
 
-.box::before {
-    content: "";
-    float: left;
-    width: 5px;
-    height: 200px;
-}
 
-.box > *:first-child {
-    float: right;
-    width: 100%;
-    margin-left: -5px;
-}   
-
-.box::after {
-    content: "\02026";
-    box-sizing: content-box;
-    float: right;
-    position: relative;
-    top: -25px;
-    left: 100%; 
-    width: 3em;
-    margin-left: -3em;
-    padding-right: 5px; 
-    text-align: right;
-    background-size: 100% 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #ebebeb 50%, #ebebeb);
-}
                                          /*Обрезка текста блога и троеточие в конце*/
-
-
 
 
 .recent-news-desc h4 a:hover{
@@ -178,7 +253,7 @@ div.service {
     font-weight: 700;
 }
 .recent-news-desc h4::before {
-    background: #ed1556 none repeat scroll 0 0;
+    background: #2196F3 none repeat scroll 0 0;
     bottom: 0;
     content: "";
     height: 1px;
@@ -191,6 +266,53 @@ div.service {
 .recent-news-desc {
   margin-bottom: 21px;
 }
+
+.blog-title-index {
+  margin-bottom: 20px;
+  h1 {
+    height: 30px;
+    display: block;
+    font-size: 20px;
+    position: relative;
+    text-transform: none;
+    font-weight: 700;
+    }
+}
+
+.blog-title-index h1::before {
+   background: #2196F3 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left: -22px;
+    position: absolute;
+    width: 44px;
+}
+
+.title-pages {
+  margin-bottom: 20px;
+  h3 {
+    height: 30px;
+    display: block;
+    font-size: 20px;
+    position: relative;
+    text-transform: none;
+    font-weight: 700;
+    }
+}
+
+.title-pages h3::before {
+   background: #2196F3 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left: -22px;
+    position: absolute;
+    width: 44px;
+}
+
 
 .blog-img {
   display: block;
@@ -215,11 +337,8 @@ div.service {
   }
 }
 
-.top-image{
+.carousel{
   margin-bottom: 30px;
-        .container{
-          margin-top: 10px;
-  }
 }
 
 .service {
@@ -228,4 +347,58 @@ div.service {
 
 .clients_content {
   padding-top: 20px;
+}
+
+.orders {
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+.contacts {
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+.edit-registration {
+  .row{
+  margin-bottom: 50px;}
+}
+.new-registration { 
+  .row{
+  margin-bottom: 50px;}
+}
+
+#user_adress {
+  height: 100px;
+  resize: none;
+}
+
+
+.location-class {
+        line-height: 19px;
+        margin-top: 15px;
+        padding-left: 35px;
+        position: relative;
+        margin-top: 32px;
+        .icon-container {
+            font-size: 30px;
+            left: 0;
+            position: absolute;
+            top: 10%;
+        }
+        
+        .text {
+          font-size: 16px;
+          letter-spacing: .03px;
+            .head-heading{
+                font-size: 15px;
+                line-height: 20px;
+                display: block;
+            }
+            .head-content{
+                display: block;
+                font-weight: 600;
+                color: #2196F3; 
+            }
+       }
 }
