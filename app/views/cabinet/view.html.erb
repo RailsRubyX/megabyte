@@ -4,33 +4,35 @@
 	<h3>Заказы за год</h3>
 	<p></p>
 
-<div class="row">
+<div class="row-t">
 
-	<table border="1">
-	<tr bgcolor="lightgrey">
-		<td align="center" width="10%"> Дата </td>
-		<td align="center" width="10%"> № заказа </td>
-		<td align="center" width="10%"> Статус </td>
-		<td align="center" width="20%"> Менеджер </td>
-		<td align="center" width="20%"> Мастер </td>
-		<td align="center" width="9%"> Сумма </td>
-		<td align="center" width="11%"> Акт </td>
-	</tr
+	<div class="list_line">
+		<div class="list_column" > Дата </div>
+		<div class="list_column" > № заказа </div>
+		<div class="list_column" > Статус </div>
+		<div class="list_column" > Менеджер </div>
+		<div class="list_column" > Мастер </div>
+		<div class="list_column" > Сумма </div>
+		<div class="list_column" > Акт </div>
+	</div>
 
 	<% @list.each do |row| %>
 
-	<tr>
-		<td align="center" width="10%"> <%= row["_Date_Time"].strftime("%Y.%m.%d") %> </td>
-		<td align="center" width="10%"> <%= row["_Number"] %> </td>
-		<td align="center" width="10%"> <%= OrderList.description_status(row["Status"]) %>  </td>
-		<td align="center" width="20%"> <%= row["Manager"] %>  </td>
-		<td align="center" width="20%"> <%= row["Master"] %>  </td>
-		<td align="center" width="9%"> <%= row["Summa"] %>  </td>
-		<td align="center" width="11%"> <a href="assets/Akt.pdf">Скачать Акт в PDF</a> </td>
-	</tr
+	<div class="<%= cycle('list_line_odd', 'list_line_even') %>">
+		<div class="list_column"> <%= row["_Date_Time"].strftime("%Y.%m.%d") %> </div>
+		<div class="list_column"> <%= row["_Number"]%> <br> <%= link_to "Показать", cabinet_show_order_path(row["_Number"]), remote: true %> </div>
+		<div class="list_column"> <%= OrderList.description_status(row["Status"]) %>  </div>
+		<div class="list_column"> <%= row["Manager"] %>  </div>
+		<div class="list_column"> <%= row["Master"] %>  </div>
+		<div class="list_column"> <%= row["Summa"] %>  </div>
+		<div class="list_column"> <a href="assets/Akt.pdf">Скачать Акт в PDF</a> </div>
+	</div>
+	<div id="<%=row["_Number"]%>" class="list_line" style="display: none">
+	
+	</div>
 
 	<% end %>
-	</table>
+
 </div> <!-- список заказов-->
 
 </div><!--/container-->

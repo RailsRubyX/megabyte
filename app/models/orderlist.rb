@@ -1,4 +1,4 @@
-class OrderList < ActiveRecord::Base
+class OrderList
 
 	def self.getlist(user_id)
 
@@ -6,14 +6,15 @@ class OrderList < ActiveRecord::Base
 		#byebug
 		ActiveRecord::Base.establish_connection :sqlserver
 
-		@results = ActiveRecord::Base.connection.select_all("SELECT     DATEADD(YEAR, -2000, _Date_Time) AS _Date_Time, Megabyte.dbo._Document183._Number, Megabyte.dbo._Enum13249._EnumOrder AS Status,
+		@results = ActiveRecord::Base.connection.select_all("SELECT     DATEADD(YEAR, -2000, _Date_Time) AS _Date_Time, rtrim(Megabyte.dbo._Document183._Number) AS _Number, Megabyte.dbo._Enum13249._EnumOrder AS Status,
 						      Megabyte.dbo._Reference120._Description AS Master, _Reference120_1._Description AS Manager, Megabyte.dbo._Document183._Fld3165 AS Summa
 							  FROM         Megabyte.dbo._Document183
 							  INNER JOIN Megabyte.dbo._Reference14726 ON (Megabyte.dbo._Document183._Fld3155RRef = Megabyte.dbo._Reference14726._Fld14731RRef AND Megabyte.dbo._Reference14726._Fld14727 = '#{user_id}')
 							  LEFT OUTER JOIN Megabyte.dbo._Reference120 ON Megabyte.dbo._Document183._Fld13241RRef = Megabyte.dbo._Reference120._IDRRef
 							  LEFT OUTER JOIN Megabyte.dbo._Enum13249 ON Megabyte.dbo._Document183._Fld13250RRef = Megabyte.dbo._Enum13249._IDRRef
 							  LEFT OUTER JOIN Megabyte.dbo._Reference120 AS _Reference120_1 ON Megabyte.dbo._Document183._Fld13248RRef = _Reference120_1._IDRRef
-								WHERE     (Megabyte.dbo._Document183._Date_Time > CONVERT(DATETIME, '#{DateTime.now.prev_year(-1999).strftime("%Y-%m-%d")}', 102))").to_hash
+								WHERE     (Megabyte.dbo._Document183._Date_Time > CONVERT(DATETIME, '#{DateTime.now.prev_year(-1999).strftime("%Y-%m-%d")}', 102))
+								ORDER BY DATEADD(YEAR, -2000, _Date_Time)").to_hash
 
 		ActiveRecord::Base.establish_connection conf_connection
 
@@ -21,6 +22,22 @@ class OrderList < ActiveRecord::Base
 
 	end
 
+
+	def self.getdetails(order_number)
+
+		conf_connection = ActiveRecord::Base.connection_config
+		#byebug
+		ActiveRecord::Base.establish_connection :sqlserver
+
+		@results = ActiveRecord::Base.connection.select_all("Select Megabyte.dbo._Document183_VT3209._Fld3211 AS Usluga, Megabyte.dbo._Document183_VT3209._Fld3212 AS Kol, Megabyte.dbo._Document183_VT3209._Fld3214 AS Summa, Megabyte.dbo._Document183._Number from Megabyte.dbo._Document183_VT3209
+								Inner Join Megabyte.dbo._Document183 ON Megabyte.dbo._Document183._IDRRef = Megabyte.dbo._Document183_VT3209._Document183_IDRRef
+								WHERE Megabyte.dbo._Document183._Number LIKE '#{order_number}%'").to_hash
+
+		ActiveRecord::Base.establish_connection conf_connection
+
+		return @results
+
+	end
 
 	def self.description_status(orderstarus)
 

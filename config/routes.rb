@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   get 'orderlist', to: 'cabinet#view'
   
   resources :posts
-  
+
+  resources :cabinet do
+  		get :show_order
+  end
+
   root "posts#index"
 
   get '/about', to: 'pages#about'

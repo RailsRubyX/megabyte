@@ -12,5 +12,14 @@ class CabinetController < ApplicationController
 	end
 	
   end
+
+  def show_order
+    #byebug
+    @details = OrderList.getdetails(params[:cabinet_id])
+  	#byebug
+  	respond_to do |format|
+  		format.js
+  	end
+  end
   
 end
