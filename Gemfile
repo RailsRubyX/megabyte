@@ -38,7 +38,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
 gem 'russian', '~> 0.6.0'
-
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
 
 
 # Use Capistrano for deployment

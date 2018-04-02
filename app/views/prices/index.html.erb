@@ -1,0 +1,26 @@
+<div class="main-content">
+	<div class="container">
+		<div class="row">
+			<div class="pricelist">
+				<h3>Прайслист</h3>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="prices">
+				<ul>
+					<% @prices.each do |price| %>
+						<%= link_to price do %>	
+						<h2><%= price.title %></h2>
+						<% end %>	
+						<% price.pricelists.each do |pricelist| %>
+							<li> <%= pricelist.name %> <%= pricelist.value %> </li>
+						<% end %>	
+					<% end %>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+</div>			
