@@ -39,6 +39,8 @@ gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
 gem 'russian', '~> 0.6.0'
 
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
