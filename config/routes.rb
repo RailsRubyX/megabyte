@@ -6,16 +6,17 @@ Rails.application.routes.draw do
   
   resources :posts
 
+  resources :prices
+  
   resources :cabinet do
-  		get :show_order
-      get :show
+  	get :show_order
+  	get :show
   end
 
   root "posts#index"
 
   get '/about', to: 'pages#about'
   get '/contacts', to: 'pages#contacts'
-  get '/pricelist', to: 'pages#pricelist'
   get '/clients', to: 'pages#clients'
   get '/service', to: 'pages#service'
 

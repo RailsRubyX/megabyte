@@ -1,0 +1,35 @@
+<%= form_for @price, html: {multipart: true} do |f| %>
+	<% if @price.errors.any? %>
+		<div id="errors">
+			<h2><%= pluralize(@price.errors.count, "error") %> prevented this price from saving</h2>
+			<ul>
+				<% @price.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+		
+	<div class="form_group">
+			<%= f.label :Заголовок_группы %><br>
+			<%= f.text_field :title, class: "form-control" %>
+	</div>
+	 <h3>Tasks</h3>
+  	<div id='pricelists'>
+    <%= f.fields_for :pricelists do |pricelist| %>
+      <%= render 'pricelist_fields', :f => pricelist %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'add task', f, :pricelists %>
+    </div>
+  </div>
+		<br>
+
+	
+
+	<div class="blog-edit text-center">
+			<p><%= f.submit class: "btn btn-danger" %>
+			<%= link_to 'Назад', root_path, class: "btn btn-primary" %></p>
+	</div>
+	
+<% end %>
