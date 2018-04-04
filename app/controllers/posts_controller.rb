@@ -7,12 +7,20 @@ class PostsController < ApplicationController
 
 
 	def new
-		@post = current_user.posts.build
+		if current_user.id == 1
+			@post = current_user.posts.build
+		else
+			redirect_to root_path
+		end		
 	end
 
 
 	def create
-		@post = current_user.posts.build(post_params)
+		if current_user.id == 1
+			@post = current_user.posts.build(post_params)
+		else
+			redirect_to root_path
+		end	
 		
 		if @post.save
 			redirect_to @post

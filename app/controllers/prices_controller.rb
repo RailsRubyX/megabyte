@@ -1,16 +1,25 @@
 class PricesController < ApplicationController
 	before_action :find_price, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
 		@prices = Price.all.order('created_at DESC')
 	end
 	
 	def new
-		@price = Price.new
+		if current_user.id == 1
+			@price = Price.new
+		else
+			redirect_to root_path
+		end		
 	end
 
 	def create
-		@price = Price.new(price_params)
+		if current_user.id == 1
+			@price = Price.new(price_params)
+		else
+			rredirect_to root_path
+		end	
 
 		if @price.save
 			redirect_to @price, notice: "Успешно создана группа прайслиста"
