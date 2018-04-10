@@ -13,10 +13,11 @@ Rails.application.routes.draw do
   	get :show
   end
 
+  resources :contacts
+
   root "posts#index"
 
   get '/about', to: 'pages#about'
-  get '/contacts', to: 'pages#contacts'
   get '/clients', to: 'pages#clients'
   get '/service', to: 'pages#service'
 

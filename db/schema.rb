@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402173754) do
+ActiveRecord::Schema.define(version: 20180404121312) do
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "country"
+    t.string "oblast"
+    t.string "city"
+    t.string "street1"
+    t.string "street2"
+    t.string "mobile1"
+    t.string "mobile2"
+    t.string "fax"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"

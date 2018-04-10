@@ -18,7 +18,7 @@ class PricesController < ApplicationController
 		if current_user.id == 1
 			@price = Price.new(price_params)
 		else
-			rredirect_to root_path
+			redirect_to root_path
 		end	
 
 		if @price.save
@@ -32,6 +32,11 @@ class PricesController < ApplicationController
 	end
 
 	def edit
+		if current_user.id == 1
+			@price = Price.find(params[:id])
+		else
+			redirect_to root_path
+		end		
 	end
 	
 	def update

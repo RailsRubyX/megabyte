@@ -1,0 +1,50 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Страна:</strong>
+    <%= @contact.country %>
+  </p>
+
+  <p>
+    <strong>Область:</strong>
+    <%= @contact.oblast %>
+  </p>
+
+  <p>
+    <strong>Город:</strong>
+    <%= @contact.city %>
+  </p>
+
+  <p>
+    <strong>Адрес 1:</strong>
+    <%= @contact.street1 %>
+  </p>
+
+  <p>
+    <strong>Адрес 2:</strong>
+    <%= @contact.street2 %>
+  </p>
+
+  <p>
+    <strong>Мобильный телефон:</strong>
+    <%= @contact.mobile1 %>
+  </p>
+
+  <p>
+    <strong>Городской телефон:</strong>
+    <%= @contact.mobile2 %>
+  </p>
+
+  <p>
+    <strong>Факс:</strong>
+    <%= @contact.fax %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @contact.email %>
+  </p>
+
+  <%= link_to 'Back', contacts_path %>
+</div>
