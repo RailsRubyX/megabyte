@@ -1,9 +1,9 @@
+
 <header class="main-header">
   <section class="header-wrapper navgiation-wrapper">
-     <nav class="navbar navbar-default navbar-fixed-top">
+     
       <div class="repair-header-top">
       <div class="container">
-        <div class="opacity-block"></div>
         <div class="row">
           <div class="col-md-3 col-sm-12 repair-col-logo">
             <div class="megabyte-logo">
@@ -22,7 +22,7 @@
                       <span class="glyphicon glyphicon-phone"></span>
                   </div>
                   <div class="text">
-                    <span class="head-heading"><font color="white">Позвоните нам</font></span>
+                    <span class="head-heading">Позвоните нам</span>
                     <span class="head-content">+380971234567</span>
                   </div>
                 </div>
@@ -33,7 +33,7 @@
                       <span class="glyphicon glyphicon-time"></span>
                   </div>
                   <div class="text">
-                    <span class="head-heading"><font color="white">Рабочее время</font></span>
+                    <span class="head-heading">Рабочее время</span>
                     <span class="head-content">Пн.-Вс. 9.00 - 18.00</span>
                   </div>
                 </div>
@@ -50,8 +50,8 @@
       </div>
     </div>
 
-   
-      <div class="container">
+   <nav class="navbar navbar-inverse">
+      <div class="container"> 
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main">
             <span class="sr-only">Toggle navigation</span>
@@ -99,24 +99,3 @@
     </nav>
   </section>
 </header>
-
-<script>
- $(window).scroll(function(){
-    $(".opacity-block").each(function () {
-      var scrolled;
-      window.onscroll = function() {
-      scrolled = window.pageYOffset || document.documentElement.scrollTop;
-      if(scrolled > 100){
-        $(".opacity-block").addClass('stick_bottom'); 
-    }
-    if(100 > scrolled){
-        $(".opacity-block").removeClass('stick_bottom'); 
-        $(".opacity-block").addClass('stick_top');       
-    }
-
-}
-    });
-});
-</script>
-
-

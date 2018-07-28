@@ -27,9 +27,11 @@ body {
 
 
 
-                                                     /*Раздел Header*/
+                                      /*Раздел Header*/
 
 .repair-header-top {
+  background-color: transparent;
+  
     line-height: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -90,6 +92,30 @@ body {
         }  
 }
 
+.opacity-block {
+ background-color: transparent;
+  filter: alpha(opacity=60);
+  /* IE */
+  -moz-opacity: 0.6;
+  /* Mozilla */
+  opacity: 0.6;
+  /* CSS3 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.stick_top{
+  background-color: transparent;
+}
+.stick_bottom{
+  background: #595959;
+  opacity: 0.9;
+  -moz-opacity: 0.8;
+}
+
 @media only screen and (min-width:991px) and (max-width: 1200px)  {
     
     .repair-header-top {
@@ -127,13 +153,14 @@ body {
 .navbar{
   margin:0;
   border: none;
-  position:relative;
   min-height:50px;
   border-radius: 0;
 }
 
 .navbar-default {
-    background-color: #1D1D1D;
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
 }
 
 #navbar-main {
@@ -439,4 +466,77 @@ font-size: 2.5em;
     font-weight: 100;
 }  
 
+.banner{
+  background-image:url('http://www.hd-freewallpapers.com/latest-wallpapers/abstract-website-backgrounds.jpg');
+  text-align: center;
+    color: #fff;
+   
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
+nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
+    -moz-transition: padding-top .3s,padding-bottom .3s;
+    transition: padding-top .3s,padding-bottom .3s;
+    border: none;
+  }
+  
+ .shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #212529;
+}
+.banner{
+  background-image:url('http://www.hd-freewallpapers.com/latest-wallpapers/abstract-website-backgrounds.jpg');
+  text-align: center;
+    color: #fff;
+   
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.banner-text{
+  padding:200px 0 150px 0;
+}
+.banner-heading{
+  font-family: 'Lobster', cursive;
+  font-size: 75px;
+    font-weight: 700;
+    line-height: 100px;
+    margin-bottom: 30px;
+  color:#fff;
+}
+.banner-sub-heading{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 50px;
+  color:#fff;
+}
+
+.btn-banner{
+  padding:5px 20px;
+  border-radius:10px;
+  font-weight:700;
+  line-height:1.5;
+  text-align:center;
+  color:#fff;
+  text-transform:uppercase;
+}
+
+.text-intro{
+  width:90%;
+  margin:auto;
+  text-align:center;
+  padding-top:30px;
+}
