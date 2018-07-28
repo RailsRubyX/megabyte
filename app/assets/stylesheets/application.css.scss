@@ -402,3 +402,36 @@ div.service {
             }
        }
 }
+
+
+                                                     /*Счетчик на главной странице*/
+.counter
+{
+    background-color: #009CFF;
+    text-align: center;
+    color:#ffffff;
+}
+.employees,.customer,.design,.order
+{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.counter-count
+{
+    box-sizing: border-box;
+  display: block;
+float: none;
+line-height: 40px;
+position: static;
+z-index: auto;
+font-weight: bold;
+font-size: 2.5em;
+}
+
+.employee-p,.customer-p,.order-p,.design-p
+{
+    font-size: 1.5em;
+    color:#ffffff;
+    line-height: 34px;
+    font-weight: 100;
+}  

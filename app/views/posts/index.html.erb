@@ -90,6 +90,77 @@
 	</div>
 </section>
 
+
+<div class="counter" style="background-image: url(<%= asset_path 'pattern3.png' %>);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="employees">
+                    <div class="box-icon">
+                      <span>
+                        <i class="fa fa-smile-o fa-2x"></i>
+                      </span>
+                    </div> 
+                    <p class="counter-count">879</p>
+                    <p class="employee-p">Happy Customers</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="customer">
+                  <div class="box-icon">
+                      <span>
+                        <i class="fa fa-laptop fa-2x"></i>
+                      </span>
+                  </div> 
+                    <p class="counter-count">954</p>
+                    <p class="customer-p">Laptop Repaired</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="design">
+                  <div class="box-icon">
+                      <span>
+                        <i class="fa fa-television fa-2x"></i>
+                      </span>
+                    </div> 
+                    <p class="counter-count">1050</p>
+                    <p class="design-p">Computer Repaired</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="order">
+                 <div class="box-icon">
+                      <span>
+                        <i class="fa fa-apple fa-2x"></i>
+                      </span>
+                    </div>  
+                    <p class="counter-count">652</p>
+                    <p class="order-p">OS Installed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+$('.counter-count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 5000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+</script>
+
+
 <script>
 $(function(){
   $('.box').dotdotdot();
