@@ -1,39 +1,36 @@
-<div class="orders">
-	<div class="container">
-		<div class="row">
-			<div class="title-pages text-center">
-				<h3>Заказы за год</h3>
-			</div>
+
+<div class="container">
+
+	<h3>Заказы за выбранный период</h3>
+	<p></p>
+
+	<div class="row">
+		<div class="col-xs-7 col-sm-1" > Дата </div>
+		<div class="col-xs-7 col-sm-1" > № Заказа </div>
+		<div class="col-xs-7 col-sm-2" > Статус </div>
+		<div class="col-xs-7 col-sm-3" > Менеджер </div>
+		<div class="col-xs-7 col-sm-3" > Мастер </div>
+		<div class="col-xs-7 col-sm-1" > Сумма,грн. </div>
+		<div class="col-xs-7 col-sm-1" > Акт </div>
+	</div>
+
+	<% @list.each do |row| %>
+
+		<div class="row" style="<%= cycle("background: #e0f8f8;","background: #ffffff;") %>">
+			<div class="col-xs-7 col-sm-1"> <%= row["_Date_Time"].strftime("%Y.%m.%d") %> </div>
+			<div class="col-xs-7 col-sm-1"> <%= row["_Number"]%> <br> <%= link_to "Показать", cabinet_show_order_path(row["_Number"]), id: "link"+row["_Number"], remote: true %> 
+				<%= link_to "Скрыть", cabinet_show_path(row["_Number"]), id: "l"+row["_Number"], hidden: true, remote: true %></div>
+			<div class="col-xs-7 col-sm-2"> <%= OrderList.description_status(row["Status"]) %>  </div>
+			<div class="col-xs-7 col-sm-3"> <%= row["Manager"] %> </div>
+			<div class="col-xs-7 col-sm-3"> <%= row["Master"] %> </div>
+			<div class="col-xs-7 col-sm-1"> <%= row["Summa"] %> </div>
+			<div class="col-xs-7 col-sm-1"> <a href="assets/Akt.pdf">Акт в PDF</a> </div>
 		</div>
 
-		<div class="row">
+		<div id="<%=row["_Number"]%>" style="display: none">
 
-			<table border="1">
-			<tr bgcolor="lightgrey">
-				<td align="center" width="10%"> Дата </td>
-				<td align="center" width="10%"> № заказа </td>
-				<td align="center" width="10%"> Статус </td>
-				<td align="center" width="20%"> Менеджер </td>
-				<td align="center" width="20%"> Мастер </td>
-				<td align="center" width="9%"> Сумма </td>
-				<td align="center" width="11%"> Акт </td>
-			</tr>
+		</div>
 
-			<% @list.each do |row| %>
+	<% end %>
 
-			<tr>
-				<td align="center" width="10%"> <%= row["_Date_Time"].strftime("%Y.%m.%d") %> </td>
-				<td align="center" width="10%"> <%= row["_Number"] %> </td>
-				<td align="center" width="10%"> <%= OrderList.description_status(row["Status"]) %>  </td>
-				<td align="center" width="20%"> <%= row["Manager"] %>  </td>
-				<td align="center" width="20%"> <%= row["Master"] %>  </td>
-				<td align="center" width="9%"> <%= row["Summa"] %>  </td>
-				<td align="center" width="11%"> <a href="assets/Akt.pdf">Скачать Акт в PDF</a> </td>
-			</tr>
-
-			<% end %>
-			</table>
-		</div> <!-- список заказов-->
-
-	</div><!--/container-->
-</div>
+</div><!--/container-->

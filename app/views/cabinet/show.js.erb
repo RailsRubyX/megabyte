@@ -1,0 +1,12 @@
+
+$('#<%=params[:cabinet_id]%>').toggle()
+
+if ($('#<%=params[:cabinet_id]%>').is(':visible')) {
+    // виден
+$('#<%="l"+params[:cabinet_id]%>').html('Скрыть')
+}
+
+else {
+    // не виден
+$('#<%="l"+params[:cabinet_id]%>').html('Показать')
+}

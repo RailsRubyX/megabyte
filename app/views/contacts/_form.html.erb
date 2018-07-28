@@ -1,0 +1,72 @@
+<div class="adress_form">
+  <%= form_for @contact do |form| %>
+    <% if @contact.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+        <ul>
+        <% @contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= form.label :Страна %>
+        <%= form.text_field :country, id: :contact_country, class: "form-control" %>
+       </div> 
+    
+
+      <div class="form-group col-md-6">
+        <%= form.label :Область %>
+        <%= form.text_field :oblast, id: :contact_oblast, class: "form-control" %>
+      </div>
+    </div>
+  
+    <div class="form-group col-md-12">
+      <%= form.label :Город %>
+      <%= form.text_field :city, id: :contact_city, class: "form-control" %>
+    </div>
+
+    <div class="form-group col-md-12">
+      <%= form.label :Адрес %>
+      <%= form.text_field :street1, id: :contact_street1, class: "form-control" %>
+    </div>
+
+    <div class="form-group col-md-12">
+      <%= form.label :Дополнительный_адрес %>
+      <%= form.text_field :street2, id: :contact_street2, class: "form-control" %>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= form.label :Мобильный_телефон %>
+        <%= form.text_field :mobile1, id: :contact_mobile1, class: "form-control" %>
+      </div>
+
+      <div class="form-group col-md-6">
+       <%= form.label :Городской_телефон %>
+       <%= form.text_field :mobile2, id: :contact_mobile2, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= form.label :Факс %>
+        <%= form.text_field :fax, id: :contact_fax, class: "form-control" %>
+      </div>
+
+      <div class="form-group col-md-6">
+        <%= form.label :email %>
+       <%= form.text_field :email, id: :contact_email, class: "form-control" %>
+     </div>
+    </div>
+
+    <div class="actions text-center">
+      <%= form.submit class: "btn btn-danger"%>
+      <%= link_to 'Назад', contacts_path, class: "btn btn-danger" %>
+    </div>
+  <% end %>
+</div>

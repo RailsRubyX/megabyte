@@ -403,9 +403,7 @@ div.service {
        }
 }
 
-.admin_title {
-  margin-bottom: 5px;
-}
+<<<<<<< HEAD
 
                                                      /*Счетчик на главной странице*/
 .counter
@@ -438,5 +436,8 @@ font-size: 2.5em;
     line-height: 34px;
     font-weight: 100;
 }  
-
-
+=======
+.admin_title {
+  margin-bottom: 5px;
+}
+>>>>>>> 8e26838d1cf70ce0a2a076cda909fac6bb4b151b
