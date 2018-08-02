@@ -1,5 +1,5 @@
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel fade-carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -11,26 +11,35 @@
   <div class="carousel-inner">
     <div class="item active">
       <%= image_tag "carusel1.jpg", class: "img-responsive" %>
-       <div class="carousel-caption">
-        <h1>Быстрый и качественный ремонт</h1>
-        <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
-      </div>
+       <div class="hero">
+          <hgroup>
+            <h1>We are creative</h1>        
+            <h3>Get start your next awesome project</h3>
+          </hgroup>
+          <%= link_to "Контакты", contacts_path, class: "btn btn-info btn-lg" %>
+        </div>
     </div>
 
     <div class="item">
       <%= image_tag "carusel2.jpg", class: "img-responsive" %>
-       <div class="carousel-caption">
-        <h1>Любой лозунг может быть</h1>
-        <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
-      </div>
+         <div class="hero">
+          <hgroup>
+            <h1>We are creative</h1>        
+            <h3>Get start your next awesome project</h3>
+          </hgroup>
+          <%= link_to "Клиенты", clients_path, class: "btn btn-info btn-lg" %>
+        </div>  
     </div>
 
     <div class="item">
       <%= image_tag "carusel3.jpg", class: "img-responsive" %>
-       <div class="carousel-caption">
-        <h1>Текст другого размера может быть</h1>
-        <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
-      </div>
+        <div class="hero">
+          <hgroup>
+            <h1>We are creative</h1>        
+            <h3>Get start your next awesome project</h3>
+          </hgroup>
+          <%= link_to "Контакты", contacts_path, class: "btn btn-info btn-lg" %>
+        </div>  
     </div>
   </div>
 
