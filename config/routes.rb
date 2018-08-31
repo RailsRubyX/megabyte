@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :cabinet do
   	get :show_order
   	get :show
+    get :refresh
+    get :show_status
   end
 
   root "posts#index"
