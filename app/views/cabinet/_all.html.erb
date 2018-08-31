@@ -1,0 +1,28 @@
+	<div class="row">
+		<div class="col-xs-7 col-sm-1" > Дата </div>
+		<div class="col-xs-7 col-sm-1" > № Заказа </div>
+		<div class="col-xs-7 col-sm-2" > Статус </div>
+		<div class="col-xs-7 col-sm-3" > Менеджер </div>
+		<div class="col-xs-7 col-sm-3" > Мастер </div>
+		<div class="col-xs-7 col-sm-1" > Сумма,грн. </div>
+		<!--div class="col-xs-7 col-sm-1" > Акт </div-->
+	</div>
+
+	<% @list.each do |row| %>
+
+		<div class="row" style="<%= cycle("background: #e0f8f8;","background: #ffffff;") %>">
+			<div class="col-xs-7 col-sm-1"> <%= row["_Date_Time"].strftime("%Y.%m.%d") %> </div>
+			<div class="col-xs-7 col-sm-1"> <%= row["_Number"]%> <br> <%= link_to "Показать", cabinet_show_order_path(row["_IDRRef"]), id: "link"+row["_IDRRef"], remote: true %> 
+				<%= link_to "Скрыть", cabinet_show_path(row["_IDRRef"]), id: "l"+row["_IDRRef"], hidden: true, remote: true %></div>
+			<div class="col-xs-7 col-sm-2"> <%= OrderList.description_status(row["Status"]) %>  </div>
+			<div class="col-xs-7 col-sm-3"> <%= row["Manager"] %> </div>
+			<div class="col-xs-7 col-sm-3"> <%= row["Master"] %> </div>
+			<div class="col-xs-7 col-sm-1"> <%= row["Summa"] %> </div>
+			<!--div class="col-xs-7 col-sm-1"> <a href="assets/Akt.pdf">Акт в PDF</a> </div-->
+		</div>
+
+		<div id="<%=row["_IDRRef"]%>" style="display: none">
+
+		</div>
+
+	<% end %>
