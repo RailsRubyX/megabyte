@@ -1,35 +1,46 @@
-<%= form_for @price, html: {multipart: true} do |f| %>
-	<% if @price.errors.any? %>
-		<div id="errors">
-			<h2><%= pluralize(@price.errors.count, "error") %> prevented this price from saving</h2>
-			<ul>
-				<% @price.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
+<div class="col-md-12">	
+	<div class="row">
+		<div class="create-edit-price">
+			<%= form_for @price, html: {multipart: true} do |f| %>
+				<% if @price.errors.any? %>
+					<div id="errors">
+						<h2><%= pluralize(@price.errors.count, "error") %> prevented this price from saving</h2>
+						<ul>
+							<% @price.errors.full_messages.each do |msg| %>
+								<li><%= msg %></li>
+							<% end %>
+						</ul>
+					</div>
 				<% end %>
-			</ul>
-		</div>
-	<% end %>
-		
-	<div class="form_group">
-			<%= f.label :Заголовок_группы %><br>
-			<%= f.text_field :title, class: "form-control" %>
-	</div>
-	 <h3>Tasks</h3>
-  	<div id='pricelists'>
-    <%= f.fields_for :pricelists do |pricelist| %>
-      <%= render 'pricelist_fields', :f => pricelist %>
-    <% end %>
-    <div class='links'>
-      <%= link_to_add_association 'add task', f, :pricelists %>
-    </div>
-  </div>
-		<br>
-
 	
-
-	<div class="blog-edit text-center">
-			<p><%= f.submit class: "btn btn-danger" %>
-			<%= link_to 'Назад', root_path, class: "btn btn-primary" %></p>
-	</div>
 	
-<% end %>
+				<div class="form_group">
+						<%= f.text_field :title, placeholder: "Заголовок услуг", class: "form-control" %>
+				</div>
+				
+			<div class="title-pages text-center">
+				<h3>Услуги и цены</h3>
+			</div>
+
+			 <div id='pricelists'>
+			    <%= f.fields_for :pricelists do |pricelist| %>
+			      <%= render 'pricelist_fields', :f => pricelist %>
+			    <% end %>
+			    
+			    <div class='links'>
+			      <%= link_to_add_association 'Добавить услугу', f, :pricelists, class: "btn btn-primary" %>
+			    </div>
+			</div>
+			
+			<% if user_signed_in? %>
+        	<% if current_user.id == 1 %>	
+				<div class="price-buttons text-center">
+					<p><%= f.submit class: "btn btn-danger" %>
+					<%= link_to 'Назад', edit_user_registration_path, class: "btn btn-primary" %></p>
+				</div>
+			<% end %>	
+			<% end %>
+			<% end %>
+		</div>	
+	</div>	
+</div>			

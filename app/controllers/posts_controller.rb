@@ -3,16 +3,25 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.all.order('created_at DESC')
+		@mainpage = true
 	end
 
 
 	def new
-		@post = current_user.posts.build
+		if current_user.id == 1
+			@post = current_user.posts.build
+		else
+			redirect_to root_path
+		end		
 	end
 
 
 	def create
-		@post = current_user.posts.build(post_params)
+		if current_user.id == 1
+			@post = current_user.posts.build(post_params)
+		else
+			redirect_to root_path
+		end	
 		
 		if @post.save
 			redirect_to @post
@@ -27,7 +36,11 @@ class PostsController < ApplicationController
 
 
 	def edit
-		@post = Post.find(params[:id])
+		if current_user.id == 1
+			@post = Post.find(params[:id])
+		else
+			redirect_to root_path
+		end			
 	end	
 
 
