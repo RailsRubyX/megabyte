@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320094646) do
+ActiveRecord::Schema.define(version: 20180404121312) do
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "country"
+    t.string "oblast"
+    t.string "city"
+    t.string "street1"
+    t.string "street2"
+    t.string "mobile1"
+    t.string "mobile2"
+    t.string "fax"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
@@ -22,6 +36,22 @@ ActiveRecord::Schema.define(version: 20180320094646) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.integer "user_id"
+  end
+
+  create_table "pricelists", force: :cascade do |t|
+    t.string "name"
+    t.string "value"
+    t.integer "price_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["price_id"], name: "index_pricelists_on_price_id"
+  end
+
+  create_table "prices", force: :cascade do |t|
+    t.string "title"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

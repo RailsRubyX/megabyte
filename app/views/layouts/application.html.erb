@@ -35,7 +35,8 @@
   </div>
 </div>
 
-  	<%= render 'layouts/header' %>  
+    <%= render('layouts/header') if @mainpage %>
+    <%= render('layouts/header_page') if @mainpage == nil%>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>

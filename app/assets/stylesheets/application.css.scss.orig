@@ -18,35 +18,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-social";
-	
- 						   
+							   
 							
 body {
-	
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  height: 100%;
-}
-
-.content{
-  flex: 1 0 auto;
-  -webkit-flex: 1 0 auto;
-  min-height: 200px;
-}
-
-#myFooter{
-  flex: 0 0 auto;
-    -webkit-flex: 0 0 auto;
+	margin-bottom: 40px;
 }
 
 
-                                      /*Раздел Header*/
+
+
+                                                     /*Раздел Header*/
 
 .repair-header-top {
-  background-color: transparent;
-  
     line-height: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -107,30 +90,6 @@ body {
         }  
 }
 
-.opacity-block {
- background-color: transparent;
-  filter: alpha(opacity=60);
-  /* IE */
-  -moz-opacity: 0.6;
-  /* Mozilla */
-  opacity: 0.6;
-  /* CSS3 */
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.stick_top{
-  background-color: transparent;
-}
-.stick_bottom{
-  background: #595959;
-  opacity: 0.9;
-  -moz-opacity: 0.8;
-}
-
 @media only screen and (min-width:991px) and (max-width: 1200px)  {
     
     .repair-header-top {
@@ -168,14 +127,13 @@ body {
 .navbar{
   margin:0;
   border: none;
+  position:relative;
   min-height:50px;
   border-radius: 0;
 }
 
 .navbar-default {
-   background-color: transparent;
-   background: transparent;
-   border-color: transparent;
+    background-color: #1D1D1D;
 }
 
 #navbar-main {
@@ -231,7 +189,18 @@ html {
   min-height: 100%;
 }
 
-
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #1D1D1D;
+  color: white;
+  p {
+  	margin-top: 10px;
+  }
+}
 								                            /* Страничка Сервис */
 
 div.service {
@@ -370,7 +339,6 @@ div.service {
 
 .carousel{
   margin-bottom: 30px;
-
 }
 
 .service {
@@ -435,9 +403,7 @@ div.service {
        }
 }
 
-.admin_title {
-  margin-bottom: 5px;
-}
+<<<<<<< HEAD
 
                                                      /*Счетчик на главной странице*/
 .counter
@@ -470,207 +436,8 @@ font-size: 2.5em;
     line-height: 34px;
     font-weight: 100;
 }  
-
-.banner{
-  background-image:url('http://www.hd-freewallpapers.com/latest-wallpapers/abstract-website-backgrounds.jpg');
-  text-align: center;
-    color: #fff;
-   
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+=======
+.admin_title {
+  margin-bottom: 5px;
 }
-
-nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
-    -moz-transition: padding-top .3s,padding-bottom .3s;
-    transition: padding-top .3s,padding-bottom .3s;
-    border: none;
-  }
-  
- .shrink {
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: #212529;
-}
-.banner{
-  background-image:url('http://www.hd-freewallpapers.com/latest-wallpapers/abstract-website-backgrounds.jpg');
-  text-align: center;
-    color: #fff;
-   
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.banner-text{
-  padding:200px 0 150px 0;
-}
-.banner-heading{
-  font-family: 'Lobster', cursive;
-  font-size: 75px;
-    font-weight: 700;
-    line-height: 100px;
-    margin-bottom: 30px;
-  color:#fff;
-}
-.banner-sub-heading{
-  font-family: 'Libre Baskerville', serif;
-  font-size: 30px;
-    font-weight: 300;
-    line-height: 30px;
-    margin-bottom: 50px;
-  color:#fff;
-}
-
-.btn-banner{
-  padding:5px 20px;
-  border-radius:10px;
-  font-weight:700;
-  line-height:1.5;
-  text-align:center;
-  color:#fff;
-  text-transform:uppercase;
-}
-
-.text-intro{
-  width:90%;
-  margin:auto;
-  text-align:center;
-  padding-top:30px;
-}
-
-
-/********************************/
-/*          Hero Headers        */
-/********************************/
-.hero {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 3;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
-      -webkit-transform: translate3d(-50%,-50%,0);
-         -moz-transform: translate3d(-50%,-50%,0);
-          -ms-transform: translate3d(-50%,-50%,0);
-           -o-transform: translate3d(-50%,-50%,0);
-              transform: translate3d(-50%,-50%,0);
-}
-.hero h1 {
-    font-size: 6em;    
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-}
-
-.fade-carousel .carousel-inner .item .hero {
-    opacity: 0;
-    -webkit-transition: 2s all ease-in-out .1s;
-       -moz-transition: 2s all ease-in-out .1s; 
-        -ms-transition: 2s all ease-in-out .1s; 
-         -o-transition: 2s all ease-in-out .1s; 
-            transition: 2s all ease-in-out .1s; 
-}
-.fade-carousel .carousel-inner .item.active .hero {
-    opacity: 1;
-    -webkit-transition: 2s all ease-in-out .1s;
-       -moz-transition: 2s all ease-in-out .1s; 
-        -ms-transition: 2s all ease-in-out .1s; 
-         -o-transition: 2s all ease-in-out .1s; 
-            transition: 2s all ease-in-out .1s;    
-}
-
-
-
-#myFooter {
-  background-color: #373a48;
-  color: white;
-  margin-top: 60px;
-}
-
-#myFooter .footer-copyright{
-  background-color: #383737;
-  padding-top:3px;
-  padding-bottom:3px;
-  text-align: center;
-}
-
-#myFooter .footer-copyright p{
-  margin:10px;
-  color: #ccc;
-}
-
-#myFooter ul{
-  list-style-type: none;
-    padding-left: 0;
-    line-height: 1.7;
-
-}
-
-#myFooter h5{
-  font-size: 18px;
-    color: white;
-    font-weight: bold;
-    margin-top: 30px;
-}
-
-#myFooter a{
-  color:#d2d1d1;
-  text-decoration: none;
-}
-
-#myFooter a:hover, #myFooter a:focus{
-  text-decoration: none;
-  color:white;
-}
-
-#myFooter .myCols{
-  text-align: center;
-}
-
-#myFooter .social-networks{
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 38px;
-}
-
-#myFooter .social-networks a{
-    font-size: 32px;
-    margin-right: 5px;
-    margin-left: 5px;
-    color: #f9f9f9;
-    padding: 10px;
-    transition: 0.2s;
-}
-
-#myFooter .social-networks a:hover{
-  text-decoration: none;
-
-}
-
-#myFooter .facebook:hover{
-  color:#0077e2;
-}
-
-#myFooter .google:hover{
-  color:#ef1a1a;
-}
-
-#myFooter .twitter:hover{
-  color: #00aced;
-}
-
-@media screen and (max-width: 767px){
-  #myFooter {
-    text-align: center;
-  }
-}
+>>>>>>> 8e26838d1cf70ce0a2a076cda909fac6bb4b151b

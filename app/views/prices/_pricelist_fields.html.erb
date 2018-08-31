@@ -1,0 +1,11 @@
+ <div class='nested-fields'>
+    <div class="price_form">
+	    <div class="field">
+	      <%= f.text_field :name, placeholder: "Услуга" %>
+	    </div>
+	    <div class="field">
+	      <%= f.text_field :value, placeholder: "Цена (грн., шт.)" %>
+	    </div>
+	    <%= link_to_remove_association "Удалить", f %>
+    </div>
+ </div>

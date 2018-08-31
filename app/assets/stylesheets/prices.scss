@@ -1,0 +1,59 @@
+// Place all the styles related to the prices controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.create-edit-price{
+	overflow:hidden;
+}
+
+.price_form {
+	.field{
+		padding-bottom: 5px;
+	}
+	float:left;
+ 	padding-right: 5px;
+}
+
+.price-buttons {
+	clear:both;
+	padding-top: 30px;
+}
+
+.price_blog {
+	overflow: hidden;
+    height: 200px;
+    width: 100%;
+    line-height: 25px;
+}
+
+.pricelist_name {
+	float:left;
+	overflow-wrap: normal;
+	width: 80%;
+}
+.pricelist_value {
+	float:right;
+}
+
+.price_link {
+	padding-bottom: 50px;
+}
+
+  .price_list {
+    list-style-type: none; /* Убираем маркеры */
+   }
+   .price_ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+   }
+
+.price_show_name {
+	float:left;
+	overflow-wrap: normal;
+	width: 80%;
+}
+.price_show_value {
+	float:right;
+	margin-right: 10px;
+} 

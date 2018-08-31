@@ -1,4 +1,5 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+<div id="myCarousel" class="carousel fade-carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -10,26 +11,35 @@
   <div class="carousel-inner">
     <div class="item active">
       <%= image_tag "carusel1.jpg", class: "img-responsive" %>
-       <div class="carousel-caption">
-        <h1>Быстрый и качественный ремонт</h1>
-        <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
-      </div>
+       <div class="hero">
+          <hgroup>
+            <h1>We are creative</h1>        
+            <h3>Get start your next awesome project</h3>
+          </hgroup>
+          <%= link_to "Контакты", contacts_path, class: "btn btn-info btn-lg" %>
+        </div>
     </div>
 
     <div class="item">
       <%= image_tag "carusel2.jpg", class: "img-responsive" %>
-       <div class="carousel-caption">
-        <h1>Любой лозунг может быть</h1>
-        <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
-      </div>
+         <div class="hero">
+          <hgroup>
+            <h1>We are creative</h1>        
+            <h3>Get start your next awesome project</h3>
+          </hgroup>
+          <%= link_to "Клиенты", clients_path, class: "btn btn-info btn-lg" %>
+        </div>  
     </div>
 
     <div class="item">
       <%= image_tag "carusel3.jpg", class: "img-responsive" %>
-       <div class="carousel-caption">
-        <h1>Текст другого размера может быть</h1>
-        <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
-      </div>
+        <div class="hero">
+          <hgroup>
+            <h1>We are creative</h1>        
+            <h3>Get start your next awesome project</h3>
+          </hgroup>
+          <%= link_to "Контакты", contacts_path, class: "btn btn-info btn-lg" %>
+        </div>  
     </div>
   </div>
 
@@ -44,15 +54,12 @@
   </a>
 </div>
 
-
 <div class="container">
       <% flash.each do |name, msg| %>
         <%= content_tag(:div, msg, class: "alert alert-info") %>
       <% end %>
 </div>
 	
-
-
 
 <section class="blog-area single-padding"> 
 	<div class="container animated" style="visibility: visible; animation-name: fadeInUp;">
@@ -89,6 +96,76 @@
 		</div>	
 	</div>
 </section>
+
+
+<div class="counter" style="background-image: url(<%= asset_path 'pattern3.png' %>);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="employees">
+                    <div class="box-icon">
+                      <span>
+                        <i class="fa fa-smile-o fa-2x"></i>
+                      </span>
+                    </div> 
+                    <p class="counter-count">879</p>
+                    <p class="employee-p">Happy Customers</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="customer">
+                  <div class="box-icon">
+                      <span>
+                        <i class="fa fa-laptop fa-2x"></i>
+                      </span>
+                  </div> 
+                    <p class="counter-count">954</p>
+                    <p class="customer-p">Laptop Repaired</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="design">
+                  <div class="box-icon">
+                      <span>
+                        <i class="fa fa-television fa-2x"></i>
+                      </span>
+                    </div> 
+                    <p class="counter-count">1050</p>
+                    <p class="design-p">Computer Repaired</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="order">
+                 <div class="box-icon">
+                      <span>
+                        <i class="fa fa-apple fa-2x"></i>
+                      </span>
+                    </div>  
+                    <p class="counter-count">652</p>
+                    <p class="order-p">OS Installed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$('.counter-count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 5000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+</script>
+
 
 <script>
 $(function(){

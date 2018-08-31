@@ -1,0 +1,37 @@
+<div class="price-content">
+	<div class="container">
+		<div class="row">
+			<div class="title-pages text-center">
+				<h3><%= @price.title %></h3>
+			</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="pricelists">
+					<ul>
+						<% @price.pricelists.each do |pricelist| %>
+							<li> 
+								<div class="price_show_name">
+									<%= pricelist.name %>
+								</div> 
+								<div class="price_show_value">
+									<%= pricelist.value %> 
+								</div>
+							</li>
+						<% end %>
+					</ul>	
+				</div>
+			</div>
+		</div>				
+			<div class="blog-edit text-center">
+				<% if user_signed_in? %>
+        			<% if current_user.id == 1 %>
+					<p><%= link_to 'Редактировать', edit_price_path(@price), class: "btn btn-sm btn-danger" %>
+					<%= link_to 'Удалить', price_path(@price), method: :delete, data: { confirm: 'Вы уверены?'},class: "btn btn-sm btn-danger" %>
+					<%= link_to 'Назад', prices_path, class: "btn btn-sm btn-primary" %>	
+					</p>
+					<% end %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

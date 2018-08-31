@@ -1,0 +1,42 @@
+<div class="price_index">
+	<div class="container">
+		<div class="row">
+			<div class="title-pages text-center">
+				<h3>Наш прайс-лист</h3>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="prices">
+				<ul class="price_ul">
+					<% @prices.each do |price| %>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<%= link_to price do %>	
+							<div class="title-pages text-center">
+								<h3><%= price.title %></h3>
+								<% end %>	
+							</div>
+							
+							<div class="price_blog">
+								<% price.pricelists.each do |pricelist| %>
+									<li class="price_list"> 
+										<div class="pricelist_name">
+											<%= pricelist.name %> 
+										</div>
+										<div class="pricelist_value">
+											<%= pricelist.value %> 
+										</div>
+									</li>
+								<% end %>
+							</div>
+							<div class="price_link">
+								<%= link_to "Подробнее...", price %>
+							</div>
+						</div>		
+					<% end %>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+</div>			
