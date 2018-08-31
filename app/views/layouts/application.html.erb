@@ -9,6 +9,32 @@
   </head>
 
   <body>
+    <!-- HTML-код модального окна "проверка заказа"-->
+<div id="statdoc" class="modal fade">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <!-- Основное содержимое модального окна -->
+      <div class="modal-body">
+        Информация о статусе заказа
+      </div>
+      <!-- Футер модального окна -->
+      <div class="modal-footer">
+
+        <%= form_tag(cabinet_show_status_path('query-status'), method: "get", remote: true) do %>
+          <%= text_field_tag :order_number, nil, maxlength: 10, placeholder: "Введите № заказа", size: 26 %>
+          <br><br>
+          <div id="status" style="color: #2196F3; font-size: 1.3em; text-align: center;"></div>
+          <br>
+          <%= submit_tag 'Показать', class: "btn btn-primary" %>
+          <%= submit_tag 'Отмена', class: "btn btn-default", data: {dismiss: "modal"} %>
+        <% end %>
+
+      </div>
+      <!-- -->
+    </div>
+  </div>
+</div>
+
   	<%= render 'layouts/header' %>  
     <%= yield %>
     <%= render 'layouts/footer' %>
