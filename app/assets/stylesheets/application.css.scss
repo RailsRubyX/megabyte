@@ -594,7 +594,6 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 #myFooter {
   background-color: #373a48;
   color: white;
-  margin-top: 60px;
 }
 
 #myFooter .footer-copyright{
@@ -675,3 +674,57 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
   }
 }
 
+.image_review{
+  position: relative;
+}
+
+.text_review{
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+
+.review{
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+
+.experience {
+  background-color: #009CFF;
+}
+
+.btn-warning{
+  background-color: black;
+  color: white;
+  border: none;
+}
+.btn-warning:hover{
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.enpty_space{
+  height:40px;
+}
