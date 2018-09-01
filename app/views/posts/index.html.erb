@@ -1,73 +1,109 @@
 
-<div id="myCarousel" class="carousel fade-carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <%= image_tag "carusel1.jpg", class: "img-responsive" %>
-       <div class="hero">
-          <hgroup>
-            <h1>We are creative</h1>        
-            <h3>Get start your next awesome project</h3>
-          </hgroup>
-          <%= link_to "Контакты", contacts_path, class: "btn btn-info btn-lg" %>
-        </div>
-    </div>
-
-    <div class="item">
-      <%= image_tag "carusel2.jpg", class: "img-responsive" %>
-         <div class="hero">
-          <hgroup>
-            <h1>We are creative</h1>        
-            <h3>Get start your next awesome project</h3>
-          </hgroup>
-          <%= link_to "Клиенты", clients_path, class: "btn btn-info btn-lg" %>
-        </div>  
-    </div>
-
-    <div class="item">
-      <%= image_tag "carusel3.jpg", class: "img-responsive" %>
-        <div class="hero">
-          <hgroup>
-            <h1>We are creative</h1>        
-            <h3>Get start your next awesome project</h3>
-          </hgroup>
-          <%= link_to "Контакты", contacts_path, class: "btn btn-info btn-lg" %>
-        </div>  
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
 <div class="container">
       <% flash.each do |name, msg| %>
         <%= content_tag(:div, msg, class: "alert alert-info") %>
       <% end %>
 </div>
-	
+
+<div class="about-blog-index">
+<div class="container">
+  <div class="row">
+    <div class="wpb_column vc_column_container col-sm-3">
+      <div class="vc_column-inner ">
+        <div class="wpb_wrapper">
+          <div class="wdc-iconbox style-3">
+            <div class="iconbox-container">
+              <div class="box-icon" style="background-color: #009cff;"><span><i class="fa fa-wrench"></i></span></div>
+              <div class="box-content"><h4 class="box-title">Honest Services</h4><div>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa ntium dolore mque.</div></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wpb_column vc_column_container col-sm-3">
+      <div class="vc_column-inner ">
+        <div class="wpb_wrapper">
+          <div class="wdc-iconbox style-3">
+            <div class="iconbox-container">
+              <div class="box-icon" style="background-color: #3f51b5;"><span><i class="fa fa-cog"></i></span></div>
+              <div class="box-content"><h4 class="box-title">Quick Repair</h4><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor./////////////</div></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wpb_column vc_column_container col-sm-3">
+      <div class="vc_column-inner ">
+        <div class="wpb_wrapper">
+          <div class="wdc-iconbox style-3">
+            <div class="iconbox-container">
+              <div class="box-icon" style="background-color: #673ab7;"><span><i class="fa fa-history"></i></span></div>
+              <div class="box-content"><h4 class="box-title">On time delivery</h4><div>Sed ut perspiciatis unde omnis iste natus error sit voluptatm accusa ntium dolore mque.</div></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wpb_column vc_column_container col-sm-3">
+      <div class="vc_column-inner ">
+        <div class="wpb_wrapper">
+          <div class="wdc-iconbox style-3">
+            <div class="iconbox-container">
+              <div class="box-icon" style="background-color: #ff5722;"><span><i class="fa fa-heart-o"></i></span></div>
+              <div class="box-content"><h4 class="box-title">We are pasionate</h4><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.?????????</div></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="service_index_page wpb_column vc_column_container col-sm-12">
+        <div class="vc_column-inner ">
+          <div class="wpb_wrapper">
+              <div class="wpb_column vc_column_container col-sm-6">
+                <div class="vc_column-inner vc_custom_1471344060315">
+                  <div class="wpb_wrapper">
+                    <div class="text_service wdc-heading style-1 text-left"><h3 class="box-title">Leading Computer Repaire Service Company</h3><div class="box-content">Ostrya is an established New York based company, specialised in Computer Repairs and Services, We repair out of warranty laptops and Computer</div></div>
+                    <div class="vc_empty_space" style="height: 15px"><span class="vc_empty_space_inner"></span></div>
+                  <%= link_to "Сервис", service_path, class: "wdc-button style-1 size-medium" %>
+                  </div>
+                </div>
+              </div>
+              <div class="wpb_column vc_column_container col-sm-6">
+              <div class="vc_column-inner vc_custom_1471344135554">
+                <div class="wpb_wrapper">
+                  <div class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1479135358445">
+                    <figure class="wpb_wrapper vc_figure">
+                     <div class="vc_single_image-wrapper   vc_box_border_grey"><img src="http://iwebdc.com/demo/ostrya/wp-content/uploads/2016/11/service-02.jpg" class="vc_single_image-img attachment-full" alt="" srcset="http://iwebdc.com/demo/ostrya/wp-content/uploads/2016/11/service-02.jpg 1024w, http://iwebdc.com/demo/ostrya/wp-content/uploads/2016/11/service-02-300x200.jpg 300w, http://iwebdc.com/demo/ostrya/wp-content/uploads/2016/11/service-02-768x512.jpg 768w, http://iwebdc.com/demo/ostrya/wp-content/uploads/2016/11/service-02-600x400.jpg 600w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="683"></div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <section class="blog-area single-padding"> 
 	<div class="container animated" style="visibility: visible; animation-name: fadeInUp;">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="blog-title-index text-center">
-          <h1>Почему выбирают нас?</h1>
-          <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
+          <h1 class="box-title">Почему выбирают нас?</h1>
+          <div class="box-content">
+          <p >Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p></div>
         </div>
       </div>
     </div>
@@ -150,6 +186,31 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="wpb_column vc_column_container col-sm-9">
+      <div class="vc_column-inner ">
+        <div class="wpb_wrapper"><h3 style="font-size: 24px;line-height: 1.4em;text-align: left;font-family:Montserrat;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1478682176952"> We’ll repair and diagnose any computer problems</h3>
+          <div class="wpb_text_column wpb_content_element ">
+            <div class="wpb_wrapper">
+             <p>10 Years of experience in Laptop &amp; Computer Repair</p>
+           </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="wpb_column vc_column_container col-sm-3">
+      <div class="vc_column-inner ">
+        <div class="wpb_wrapper">
+          <div class="btn3-container">
+            <%= link_to "Контакты", contacts_path, class: "wdc-button style-1 size-medium" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
