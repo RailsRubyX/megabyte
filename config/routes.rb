@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   resources :contacts
 
-  root "posts#index"
+  root "pages#mainpage"
 
   get '/about', to: 'pages#about'
   get '/clients', to: 'pages#clients'

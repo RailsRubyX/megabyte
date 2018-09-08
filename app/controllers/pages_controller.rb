@@ -2,6 +2,9 @@ class PagesController < ApplicationController
 
 	def index
 	end
+
+	def mainpage
+	end	
 	
 	def about
 	end
