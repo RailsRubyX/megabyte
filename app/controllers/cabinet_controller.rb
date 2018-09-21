@@ -5,7 +5,7 @@ class CabinetController < ApplicationController
   def view
   	
  	if user_signed_in?
- 		byebug
+ 		#byebug
 		@list = OrderList.getlist(current_user.id, params[:from_date], params[:to_date])
 	else
 		redirect_to new_user_session_path
@@ -30,7 +30,7 @@ class CabinetController < ApplicationController
   end
   
   def refresh
-    byebug
+    #byebug
     view
     respond_to do |format|
       format.js

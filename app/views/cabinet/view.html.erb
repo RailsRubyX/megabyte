@@ -2,16 +2,22 @@
 <div class="container">
 
 <h4>Заказы c: </h4>
+<div class="row">
+	
+	    <%= form_tag cabinet_refresh_path('all'), method: "get", remote: true do %>
+	    <div class="col-xs-3 col-sm-2">
+		    <%= date_field_tag :from_date, Date.today - 1.month %>
+		 </div>
+		 <div class="col-xs-3 col-sm-2">
+		    <%= date_field_tag :to_date, Date.today %>
+		 </div>
+		 <div class="col-xs-3 col-sm-2">
+		    <%= submit_tag "Показать" %>
+		</div>
+	    <% end %>
+	</div>
 
-    <%= form_tag cabinet_refresh_path('all'), method: "get", remote: true do %>
-	    <%#= date_field_tag :from_date, DateTime.now.prev_month(1).strftime("%d-%m-%Y") %>
-	    <%= date_field_tag :from_date, '01/01/2018' %>
-	    <%= date_field_tag :to_date, '01/01/2018' %>
-	    <%= submit_tag "Показать" %>
-    <% end %>
-
-<p>
-<p>
+<br>
 
 <%# byebug %> 
 

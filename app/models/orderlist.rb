@@ -2,9 +2,9 @@ class OrderList
 
     def self.getlist(user_id, from_date, to_date)
 		
-		byebug
+		#byebug
 
-        from_date = DateTime.now.prev_month(-1).to_s if from_date==nil
+        from_date = DateTime.now.prev_month(1).to_s if from_date==nil
         to_date = DateTime.now.to_s if to_date==nil
 
 		conf_connection = ActiveRecord::Base.connection_config
