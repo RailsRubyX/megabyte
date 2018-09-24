@@ -1,12 +1,12 @@
 <div class="col-md-12">
 	<div class="row">
 		<div class="create-edit-blog">
-			<%= form_for @post do |f| %>
-					<% if @post.errors.any? %>
+			<%= form_for @service do |f| %>
+					<% if @service.errors.any? %>
 						<div id="errors">
-							<h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving</h2>
+							<h2><%= pluralize(@service.errors.count, "error") %> prevented this service from saving</h2>
 							<ul>
-								<% @post.errors.full_messages.each do |msg| %>
+								<% @service.errors.full_messages.each do |msg| %>
 									<li><%= msg %></li>
 								<% end %>
 							</ul>
@@ -24,12 +24,12 @@
 				<br>
 					<div class="form_group">
 						<%= f.label :Изображение %><br>
-						<%= f.file_field :image %>
+						<%= f.text_field :imageurl %>
 					</div>
 				<br>
 					<div class="blog-edit text-center">
 						<p><%= f.submit class: "btn btn-danger" %>
-						<%= link_to 'Назад', edit_user_registration_path, class: "btn btn-back" %></p>
+						<%= link_to 'Назад', edit_user_registration_path, class: "btn btn-primary" %></p>
 					</div>
 			<% end %>
 		</div>
