@@ -1,6 +1,6 @@
+<a class="anchor" id="adminpage"></a>
 <div class="edit-registration">
   <div class="container">
-
     <div class="row">
       <div class="panel-heading text-center">
         <h2>Редактирование данных</h2>
@@ -56,24 +56,38 @@
         <br>
           <div class="actions">
             <%= f.submit "Обновить", class: "btn btn-danger" %>
-            <%= link_to "Назад", :back, class: "btn btn-primary"%>
+            <%= link_to "Назад", :back, class: "btn btn-back"%>
           </div>
         <% end %>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-          <div class="form_group">
+          <div class="form_group admin-button">
               <p class="admin_title"><strong>Создание нового поста</strong></p>
               <%= link_to "Новая публикация", new_post_path, class: "btn btn-danger" %>
           </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-          <div class="form_group">
-              <p class="admin_title"><strong>Создание новой услуги</strong></p>
-              <%= link_to "Новая услуга", new_price_path, class: "btn btn-danger" %>
+            <div class="form_group admin-button">
+                <p class="admin_title"><strong>Создание новой услуги</strong></p>
+                <%= link_to "Новая услуга", new_price_path, class: "btn btn-danger" %>
+            </div>
           </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="form_group admin-button">
+                <p class="admin_title"><strong>Создание нового сервиса</strong></p>
+                <%= link_to "Новый сервис", new_service_path, class: "btn btn-danger" %>
+            </div>
           </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  var myHash = location.hash; //получаем значение хеша
+  //location.hash = ''; //очищаем хеш
+  if(myHash[1] != undefined){ //проверяем, есть ли в хеше какое-то значение
+    $('html, body').animate({scrollTop: $(myHash).offset().top}, 1500); //скроллим за полсекунды
+};
+</script>

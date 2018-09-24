@@ -57,4 +57,14 @@ Rails.application.configure do
 
    # Paperclip needed (Sergowa)
   Paperclip.options[:command_path] = "/usr/bin/"
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'example.com',
+  user_name:            'bonuk.mail@gmail.com',
+  password:             'yqflpylqqhipikxw',
+  authentication:       'plain',
+  enable_starttls_auto: true }
 end

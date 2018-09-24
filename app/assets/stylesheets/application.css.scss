@@ -46,7 +46,6 @@ body {
 
 .repair-header-top {
   background-color: transparent;
-  
     line-height: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -128,7 +127,7 @@ body {
 .stick_bottom{
   background: #595959;
   opacity: 0.9;
-  -moz-opacity: 0.8;
+  
 }
 
 @media only screen and (min-width:991px) and (max-width: 1200px)  {
@@ -439,6 +438,10 @@ div.service {
   margin-bottom: 5px;
 }
 
+.admin-button {
+  margin-bottom: 20px;
+}
+
                                                      /*Счетчик на главной странице*/
 .counter
 {
@@ -728,3 +731,66 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 .enpty_space{
   height:40px;
 }
+
+/********************************/
+/*          Service page +++    */
+/********************************/
+.wdc-services-wgt{
+   border: 4px double #009CFF;
+   border-radius: 10px 20px;
+   ul {
+    margin: 10px 0 10px 0;
+   }
+} 
+
+.wpb_text_column {
+  p {
+    white-space: pre-wrap;
+  }
+}
+
+.boxs {
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -168px;
+    visibility: hidden;
+}
+
+/********************************/
+/*          Service page   ---  */
+/********************************/
+
+/********************************/
+/*          ContactUS page  +++ */
+/********************************/
+
+.btn-back{
+  display: inline-block;
+  text-align: center;
+  border: none;
+  padding: 15px 20px;
+  line-height: 1;
+  background-color: #f21515;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  letter-spacing: 1px;
+  webkit-transition: all 0.35s ease 0s;
+  -moz-transition: all 0.35s ease 0s;
+  transition: all 0.35s ease 0s;
+}
+
+/********************************/
+/*          ContactUS page  --- */
+/********************************/

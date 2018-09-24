@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'orderlist', to: 'cabinet#view'
   
   resources :posts
-
+  resources :services
   resources :prices
   
   resources :cabinet do
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   root "pages#mainpage"
 
   get '/about', to: 'pages#about'
-  get '/clients', to: 'pages#clients'
-  get '/service', to: 'pages#service'
-
+  #get '/clients', to: 'pages#clients'
+  get '/contactus', to: 'pages#contactus'
+  post '/contactus', to: 'pages#contactus'
 end
