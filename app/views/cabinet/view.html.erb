@@ -1,7 +1,7 @@
 
 <div class="container">
 
-<h4>Заказы c: </h4>
+<h4>Замовлення за період: </h4>
 <div class="row">
 	
 	    <%= form_tag cabinet_refresh_path('all'), method: "get", remote: true do %>
@@ -12,7 +12,7 @@
 		    <%= date_field_tag :to_date, Date.today %>
 		 </div>
 		 <div class="col-xs-3 col-sm-2">
-		    <%= submit_tag "Показать" %>
+		    <%= submit_tag "Показати" %>
 		</div>
 	    <% end %>
 	</div>

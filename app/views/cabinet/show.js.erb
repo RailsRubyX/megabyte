@@ -3,10 +3,10 @@ $('#<%=params[:cabinet_id]%>').toggle()
 
 if ($('#<%=params[:cabinet_id]%>').is(':visible')) {
     // виден
-$('#<%="l"+params[:cabinet_id]%>').html('Скрыть')
+$('#<%="l"+params[:cabinet_id]%>').html('Приховати')
 }
 
 else {
     // не виден
-$('#<%="l"+params[:cabinet_id]%>').html('Показать')
+$('#<%="l"+params[:cabinet_id]%>').html('Показати')
 }
