@@ -71,7 +71,7 @@
             <li><%= link_to "Прайс", prices_path, class: "active" %></li>
             <li><%= link_to "Контакты", contacts_path, class: "active" %></li>
             <!-- Кнопка, открывающая модальное окно -->
-            <li><a href="#statdoc" class="active" data-toggle="modal">Статус заказа</a></li>
+            <li><a href="#statdoc" class="active" data-toggle="modal">Статус замовлення</a></li>
           </ul>
 
           <% if user_signed_in? %>
@@ -81,7 +81,7 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Аккаунт
                   <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to "Список заказов", orderlist_path %></li>
+                  <li><%= link_to "Список замовлень", orderlist_path %></li>
                   <li><%= link_to "Изменить аккаунт", edit_user_registration_path + "#adminpage"%></li>
                 </ul>
              </li>
@@ -120,7 +120,7 @@
             <h1>We are creative</h1>        
             <h3>Get start your next awesome project</h3>
           </hgroup>
-          <a href="#statdoc" class="active btn btn-info btn-lg" data-toggle="modal">Статус заказа</a>
+          <a href="#statdoc" class="active btn btn-info btn-lg" data-toggle="modal">Статус замовлення</a>
           <%= link_to "Заказать услугу", contactus_path + "#contactus", class: "btn btn-info btn-lg" %>
         </div>
     </div>
@@ -132,7 +132,7 @@
             <h1>We are creative</h1>        
             <h3>Get start your next awesome project</h3>
           </hgroup>
-          <a href="#statdoc" class="active btn btn-info btn-lg" data-toggle="modal">Статус заказа</a>
+          <a href="#statdoc" class="active btn btn-info btn-lg" data-toggle="modal">Статус замовлення</a>
           <%= link_to "Заказать услугу", contactus_path + "#contactus", class: "btn btn-info btn-lg" %>
         </div>  
     </div>
@@ -144,7 +144,7 @@
             <h1>We are creative</h1>        
             <h3>Get start your next awesome project</h3>
           </hgroup>
-          <a href="#statdoc" class="active btn btn-info btn-lg" data-toggle="modal">Статус заказа</a>
+          <a href="#statdoc" class="active btn btn-info btn-lg" data-toggle="modal">Статус замовлення</a>
           <%= link_to "Заказать услугу", contactus_path + "#contactus", class: "btn btn-info btn-lg" %>
         </div>  
     </div>
