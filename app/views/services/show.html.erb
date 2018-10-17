@@ -30,8 +30,8 @@
 		<div class="blog-edit text-center">
 				<% if user_signed_in? %>
         			<% if current_user.id == 1 %>
-					<p><%= link_to 'Редактировать', edit_service_path(@service), class: "btn btn-sm btn-danger" %>
-					<%= link_to 'Удалить', service_path(@service), method: :delete, data: { confirm: 'Вы уверены?'},class: "btn btn-sm btn-danger" %>
+					<p><%= link_to 'Редагувати', edit_service_path(@service), class: "btn btn-sm btn-danger" %>
+					<%= link_to 'Видалити', service_path(@service), method: :delete, data: { confirm: 'Вы уверены?'},class: "btn btn-sm btn-danger" %>
 					<%= link_to 'Назад', root_path, class: "btn btn-sm btn-primary" %>	
 					</p>
 					<% end %>

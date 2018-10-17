@@ -25,8 +25,8 @@
 			<div class="blog-edit text-center">
 				<% if user_signed_in? %>
         			<% if current_user.id == 1 %>
-					<p><%= link_to 'Редактировать', edit_price_path(@price), class: "btn btn-sm btn-danger" %>
-					<%= link_to 'Удалить', price_path(@price), method: :delete, data: { confirm: 'Вы уверены?'},class: "btn btn-sm btn-danger" %>
+					<p><%= link_to 'Редагувати', edit_price_path(@price), class: "btn btn-sm btn-danger" %>
+					<%= link_to 'Видалити', price_path(@price), method: :delete, data: { confirm: 'Вы уверены?'},class: "btn btn-sm btn-danger" %>
 					<%= link_to 'Назад', prices_path, class: "btn btn-sm btn-primary" %>	
 					</p>
 					<% end %>

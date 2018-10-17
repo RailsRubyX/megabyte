@@ -15,11 +15,11 @@
 	
 	
 				<div class="form_group">
-						<%= f.text_field :title, placeholder: "Заголовок услуг", class: "form-control" %>
+						<%= f.text_field :title, placeholder: "Послуга", class: "form-control" %>
 				</div>
 				
 			<div class="title-pages text-center">
-				<h3>Услуги и цены</h3>
+				<h3>Послуги і ціни</h3>
 			</div>
 
 			 <div id='pricelists'>
@@ -28,7 +28,7 @@
 			    <% end %>
 			    
 			    <div class='links'>
-			      <%= link_to_add_association 'Добавить услугу', f, :pricelists, class: "btn btn-primary" %>
+			      <%= link_to_add_association 'Добавити послугу', f, :pricelists, class: "btn btn-primary" %>
 			    </div>
 			</div>
 			

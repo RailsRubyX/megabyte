@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="title-pages text-center">
-        <h3>Наши контакты</h3>
+        <h3>Наші контакти</h3>
       </div>
     </div>
   <% @contacts.each do |contact| %>
@@ -59,7 +59,7 @@
       <% if user_signed_in? %>
         <% if current_user.id == 1 %>
           <div class="edit_contact text-center">
-            <%= link_to 'Редактировать контакты', edit_contact_path(contact), class: "btn btn-danger" %>
+            <%= link_to 'Редагувати контакти', edit_contact_path(contact), class: "btn btn-danger" %>
           </div>
         <% end %>
       <% end %>
@@ -68,7 +68,7 @@
   <% end %>
     <div class="row">
       <div class="title-pages text-center">
-        <h3>Наши филиалы</h3>
+        <h3>Наші філіали</h3>
       </div>
     </div>
     
