@@ -1,36 +1,29 @@
 
 <div class="container">
 
-	<h3>Заказы за выбранный период</h3>
-	<p></p>
-
-	<div class="row">
-		<div class="col-xs-7 col-sm-1" > Дата </div>
-		<div class="col-xs-7 col-sm-1" > № Заказа </div>
-		<div class="col-xs-7 col-sm-2" > Статус </div>
-		<div class="col-xs-7 col-sm-3" > Менеджер </div>
-		<div class="col-xs-7 col-sm-3" > Мастер </div>
-		<div class="col-xs-7 col-sm-1" > Сумма,грн. </div>
-		<div class="col-xs-7 col-sm-1" > Акт </div>
+<h4>Заказы c: </h4>
+<div class="row">
+	
+	    <%= form_tag cabinet_refresh_path('all'), method: "get", remote: true do %>
+	    <div class="col-xs-3 col-sm-2">
+		    <%= date_field_tag :from_date, Date.today - 1.month %>
+		 </div>
+		 <div class="col-xs-3 col-sm-2">
+		    <%= date_field_tag :to_date, Date.today %>
+		 </div>
+		 <div class="col-xs-3 col-sm-2">
+		    <%= submit_tag "Показать" %>
+		</div>
+	    <% end %>
 	</div>
 
-	<% @list.each do |row| %>
+<br>
 
-		<div class="row" style="<%= cycle("background: #e0f8f8;","background: #ffffff;") %>">
-			<div class="col-xs-7 col-sm-1"> <%= row["_Date_Time"].strftime("%Y.%m.%d") %> </div>
-			<div class="col-xs-7 col-sm-1"> <%= row["_Number"]%> <br> <%= link_to "Показать", cabinet_show_order_path(row["_Number"]), id: "link"+row["_Number"], remote: true %> 
-				<%= link_to "Скрыть", cabinet_show_path(row["_Number"]), id: "l"+row["_Number"], hidden: true, remote: true %></div>
-			<div class="col-xs-7 col-sm-2"> <%= OrderList.description_status(row["Status"]) %>  </div>
-			<div class="col-xs-7 col-sm-3"> <%= row["Manager"] %> </div>
-			<div class="col-xs-7 col-sm-3"> <%= row["Master"] %> </div>
-			<div class="col-xs-7 col-sm-1"> <%= row["Summa"] %> </div>
-			<div class="col-xs-7 col-sm-1"> <a href="assets/Akt.pdf">Акт в PDF</a> </div>
-		</div>
+<%# byebug %> 
 
-		<div id="<%=row["_Number"]%>" style="display: none">
+<div id="all_row">
 
-		</div>
+<%= render("all") %>
 
-	<% end %>
-
+</div>
 </div><!--/container-->

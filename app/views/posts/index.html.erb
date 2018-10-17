@@ -1,73 +1,11 @@
-
-<div id="myCarousel" class="carousel fade-carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <%= image_tag "carusel1.jpg", class: "img-responsive" %>
-       <div class="hero">
-          <hgroup>
-            <h1>We are creative</h1>        
-            <h3>Get start your next awesome project</h3>
-          </hgroup>
-          <%= link_to "Контакты", contacts_path, class: "btn btn-info btn-lg" %>
-        </div>
-    </div>
-
-    <div class="item">
-      <%= image_tag "carusel2.jpg", class: "img-responsive" %>
-         <div class="hero">
-          <hgroup>
-            <h1>We are creative</h1>        
-            <h3>Get start your next awesome project</h3>
-          </hgroup>
-          <%= link_to "Клиенты", clients_path, class: "btn btn-info btn-lg" %>
-        </div>  
-    </div>
-
-    <div class="item">
-      <%= image_tag "carusel3.jpg", class: "img-responsive" %>
-        <div class="hero">
-          <hgroup>
-            <h1>We are creative</h1>        
-            <h3>Get start your next awesome project</h3>
-          </hgroup>
-          <%= link_to "Контакты", contacts_path, class: "btn btn-info btn-lg" %>
-        </div>  
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-<div class="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag(:div, msg, class: "alert alert-info") %>
-      <% end %>
-</div>
-	
-
 <section class="blog-area single-padding"> 
 	<div class="container animated" style="visibility: visible; animation-name: fadeInUp;">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="blog-title-index text-center">
-          <h1>Почему выбирают нас?</h1>
-          <p>Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p>
+          <h1 class="box-title">Почему выбирают нас?</h1>
+          <div class="box-content">
+          <p >Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p></div>
         </div>
       </div>
     </div>
@@ -85,10 +23,10 @@
 							<div class="box">
 								<div>
 									<p><%= post.body %></p>
-                  <script src="jquery.dotdotdot.min.js"></script>
+                  					<script src="jquery.dotdotdot.min.js"></script>
 								</div>
 							</div>
-							<%= link_to "Подробнее", post, class: "btn btn-sm btn-primary" %>
+							<%= link_to "Подробнее", post, class: "wdc-button style-1 size-medium" %>
 						</div>
 					</div>
 				</div>	
@@ -96,75 +34,6 @@
 		</div>	
 	</div>
 </section>
-
-
-<div class="counter" style="background-image: url(<%= asset_path 'pattern3.png' %>);">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <div class="employees">
-                    <div class="box-icon">
-                      <span>
-                        <i class="fa fa-smile-o fa-2x"></i>
-                      </span>
-                    </div> 
-                    <p class="counter-count">879</p>
-                    <p class="employee-p">Happy Customers</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <div class="customer">
-                  <div class="box-icon">
-                      <span>
-                        <i class="fa fa-laptop fa-2x"></i>
-                      </span>
-                  </div> 
-                    <p class="counter-count">954</p>
-                    <p class="customer-p">Laptop Repaired</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <div class="design">
-                  <div class="box-icon">
-                      <span>
-                        <i class="fa fa-television fa-2x"></i>
-                      </span>
-                    </div> 
-                    <p class="counter-count">1050</p>
-                    <p class="design-p">Computer Repaired</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <div class="order">
-                 <div class="box-icon">
-                      <span>
-                        <i class="fa fa-apple fa-2x"></i>
-                      </span>
-                    </div>  
-                    <p class="counter-count">652</p>
-                    <p class="order-p">OS Installed</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-$('.counter-count').each(function () {
-        $(this).prop('Counter',0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 5000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
-</script>
 
 
 <script>

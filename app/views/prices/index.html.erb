@@ -1,3 +1,4 @@
+<a class="anchor" id="uslugi"></a>
 <div class="price_index">
 	<div class="container">
 		<div class="row">
@@ -40,3 +41,11 @@
 		
 	</div>
 </div>			
+
+<script>
+	var myHash = location.hash; //получаем значение хеша
+	//location.hash = ''; //очищаем хеш
+	if(myHash[1] != undefined){ //проверяем, есть ли в хеше какое-то значение
+    $('html, body').animate({scrollTop: $(myHash).offset().top}, 150); //скроллим за полсекунды
+};
+</script>

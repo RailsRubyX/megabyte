@@ -43,7 +43,7 @@
           </div>
           <div class="col-md-2 hidden-sm hidden-xs">
             <div class="btn-quote">
-              <%= link_to "Заказать услугу", prices_path, class: "btn-request_quote" %>
+              <%= link_to "Заказать услугу", contactus_path + "#contactus", class: "btn-request_quote" %>
             </div>
           </div>
         </div>
@@ -64,11 +64,14 @@
         <div class="collapse navbar-collapse" id="navbar-main">
           
           <ul class= "nav navbar-nav">
-            <li><%= link_to "О нас", about_path, class: "active" %></li>
-            <li><%= link_to "Сервис", service_path, class: "active" %></li>
-            <li><%= link_to "Клиенты", clients_path, class: "active" %></li>
+            <li><%#= link_to "О нас", about_path, class: "active" %></li>
+            <li><%= link_to "Сервис", services_path, class: "active" %></li>
+            <li><%= link_to "Блог", posts_path, class: "active" %></li>
+            <li><%#= link_to "Клиенты", clients_path, class: "active" %></li>
             <li><%= link_to "Прайс", prices_path, class: "active" %></li>
             <li><%= link_to "Контакты", contacts_path, class: "active" %></li>
+            <!-- Кнопка, открывающая модальное окно -->
+            <li><a href="#statdoc" class="active" data-toggle="modal">Статус заказа</a></li>
           </ul>
 
           <% if user_signed_in? %>
@@ -79,7 +82,7 @@
                   <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><%= link_to "Список заказов", orderlist_path %></li>
-                  <li><%= link_to "Изменить аккаунт", edit_user_registration_path %></li>
+                  <li><%= link_to "Изменить аккаунт", edit_user_registration_path + "#adminpage"%></li>
                 </ul>
              </li>
 
@@ -99,6 +102,64 @@
     </nav>
   </section>
 </header>
+
+<div id="myCarousel" class="carousel fade-carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag "carusel1.jpg", class: "img-responsive" %>
+       <div class="hero">
+          <hgroup>
+            <h1>We are creative</h1>        
+            <h3>Get start your next awesome project</h3>
+          </hgroup>
+          <a href="#statdoc" class="active btn btn-info btn-lg" data-toggle="modal">Статус заказа</a>
+          <%= link_to "Заказать услугу", contactus_path + "#contactus", class: "btn btn-info btn-lg" %>
+        </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag "carusel2.jpg", class: "img-responsive" %>
+         <div class="hero">
+          <hgroup>
+            <h1>We are creative</h1>        
+            <h3>Get start your next awesome project</h3>
+          </hgroup>
+          <a href="#statdoc" class="active btn btn-info btn-lg" data-toggle="modal">Статус заказа</a>
+          <%= link_to "Заказать услугу", contactus_path + "#contactus", class: "btn btn-info btn-lg" %>
+        </div>  
+    </div>
+
+    <div class="item">
+      <%= image_tag "carusel3.jpg", class: "img-responsive" %>
+        <div class="hero">
+          <hgroup>
+            <h1>We are creative</h1>        
+            <h3>Get start your next awesome project</h3>
+          </hgroup>
+          <a href="#statdoc" class="active btn btn-info btn-lg" data-toggle="modal">Статус заказа</a>
+          <%= link_to "Заказать услугу", contactus_path + "#contactus", class: "btn btn-info btn-lg" %>
+        </div>  
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 <script>
  $(window).scroll(function(){
