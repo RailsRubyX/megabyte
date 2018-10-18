@@ -9,40 +9,40 @@
   <%= devise_error_messages! %>
 
  <div class="form_group">
-    <%= f.label :Меня_зовут %><br />
-    <%= f.text_field :name, placeholder: "Ф.И.О.", autofocus: true, class: "form-control" %>
+    <%= f.label :Мене_звати %><br />
+    <%= f.text_field :name, placeholder: "П.І.Б.", autofocus: true, class: "form-control" %>
   </div>
   <br>
   <div class="form_group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, placeholder: "Электронная почта", autofocus: true, autocomplete: "email", class: "form-control" %>
+    <%= f.email_field :email, placeholder: "Електрона пошта", autofocus: true, autocomplete: "email", class: "form-control" %>
   </div>
 <br>
 <div class="form_group">
-    <%= f.label :Мобильный_телефон %><br />
-    <%= f.telephone_field :phone, placeholder: "Номер телефона (пример: 380971234567)", autofocus: true, class: "form-control" %>
+    <%= f.label :Мобільний_телефон %><br />
+    <%= f.telephone_field :phone, placeholder: "Номер телефону (зразок: 380971234567)", autofocus: true, class: "form-control" %>
   </div>
  <br> 
   <div class="form_group">
     <%= f.label :Пароль %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> символов минимум)</em>
+    <em>(<%= @minimum_password_length %> символів мінімум)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
   </div>
 <br>
   <div class="form_group">
-    <%= f.label :Подтверждение_пароля %><br />
+    <%= f.label :Підтвердження_паролю %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
   </div>
 <br>
 <div class="form_group">
-    <%= f.label :Адрес %><br />
-    <%= f.text_area :adress, placeholder: "Адрес", autofocus: true, class: "blog-text-area form-control" %>
+    <%= f.label :Адреса %><br />
+    <%= f.text_area :adress, placeholder: "Адреса", autofocus: true, class: "blog-text-area form-control" %>
   </div>
   <br>
   <div class="actions">
-    <%= f.submit "Регистрация", class: "btn btn-primary" %>
+    <%= f.submit "Реєстрація", class: "btn btn-primary" %>
   </div>
 <% end %>
 <br>
