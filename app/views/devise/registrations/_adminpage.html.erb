@@ -86,7 +86,7 @@
 
 <script>
   var myHash = location.hash; //получаем значение хеша
-  //location.hash = ''; //очищаем хеш
+  //location.hash = ''; //очищаем хеш 
   if(myHash[1] != undefined){ //проверяем, есть ли в хеше какое-то значение
     $('html, body').animate({scrollTop: $(myHash).offset().top}, 1500); //скроллим за полсекунды
 };
