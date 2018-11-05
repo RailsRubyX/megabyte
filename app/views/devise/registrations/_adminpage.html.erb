@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="panel-heading text-center">
-        <h2>Редактирование данных</h2>
+        <h2>Редагування даних</h2>
       </div>  
     </div>    
 
@@ -13,7 +13,7 @@
           <%= devise_error_messages! %>
           
           <div class="form_group">
-            <%= f.label :Меня_зовут %><br />
+            <%= f.label :Мене_звати %><br />
             <%= f.text_field :name, autofocus: true, class: "form-control" %>
           </div>
          <br>
@@ -23,12 +23,12 @@
           </div>
         <br>
           <div class="form_group">
-            <%= f.label :Мобильный_телефон %><br />
+            <%= f.label :Мобільний_телефон %><br />
             <%= f.telephone_field :phone, autofocus: true, class: "form-control" %>
           </div>
         <br>
           <div class="form_group">
-            <%= f.label :Адрес %><br />
+            <%= f.label :Адреса %><br />
             <%= f.text_area :adress, autofocus: true, class: "blog-text-area form-control" %>
           </div>
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -36,26 +36,26 @@
           <% end %>
         <br>
           <div class="form_group">
-            <%= f.label :Новый_пароль %> <i>(Если не хотите менять пароль, оставьте поле пустым)</i><br />
+            <%= f.label :Новий_пароль %> <i>(Якщо не хочете змінювати пароль, залиште поле порожнім)</i><br />
             <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
             <% if @minimum_password_length %>
               
-              <em><%= @minimum_password_length %> символов минимум</em>
+              <em><%= @minimum_password_length %> символів мінімум</em>
             <% end %>
           </div>
         <br>
           <div class="form_group">
-            <%= f.label :Подтверждение_нового_пароля %><br />
+            <%= f.label :Підтвердження_нового_паролю %><br />
             <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
           </div>
         <br>
           <div class="form_group">
-            <%= f.label :Текущий_пароль %> <i>(Введите текущий пароль для сохранения изменений)</i><br />
+            <%= f.label :Дійсний_пароль %> <i>(Введіть дійсний пароль для збереження змін)</i><br />
             <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
           </div>
         <br>
           <div class="actions">
-            <%= f.submit "Обновить", class: "btn btn-danger" %>
+            <%= f.submit "Оновити", class: "btn btn-danger" %>
             <%= link_to "Назад", :back, class: "btn btn-back"%>
           </div>
         <% end %>
@@ -63,20 +63,20 @@
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
           <div class="form_group admin-button">
-              <p class="admin_title"><strong>Создание нового поста</strong></p>
-              <%= link_to "Новая публикация", new_post_path, class: "btn btn-danger" %>
+              <p class="admin_title"><strong>Створення нової публікації</strong></p>
+              <%= link_to "Нова публікація", new_post_path, class: "btn btn-danger" %>
           </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="form_group admin-button">
-                <p class="admin_title"><strong>Создание новой услуги</strong></p>
-                <%= link_to "Новая услуга", new_price_path, class: "btn btn-danger" %>
+                <p class="admin_title"><strong>Створення нової послуги</strong></p>
+                <%= link_to "Нова послуга", new_price_path, class: "btn btn-danger" %>
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="form_group admin-button">
-                <p class="admin_title"><strong>Создание нового сервиса</strong></p>
-                <%= link_to "Новый сервис", new_service_path, class: "btn btn-danger" %>
+                <p class="admin_title"><strong>Створення нового сервісу</strong></p>
+                <%= link_to "Новий сервіс", new_service_path, class: "btn btn-danger" %>
             </div>
           </div>
       </div>
