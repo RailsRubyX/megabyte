@@ -2,7 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="title-pages text-center">
+<<<<<<< HEAD
         <h3>Наші контакти</h3>
+=======
+        <h3>Наши контакты</h3>
+>>>>>>> f5b642ed63968df69d7c6ff0aad10b516b291333
       </div>
     </div>
   <% @contacts.each do |contact| %>
@@ -59,7 +63,11 @@
       <% if user_signed_in? %>
         <% if current_user.id == 1 %>
           <div class="edit_contact text-center">
+<<<<<<< HEAD
             <%= link_to 'Редагувати контакти', edit_contact_path(contact), class: "btn btn-danger" %>
+=======
+            <%= link_to 'Редактировать контакты', edit_contact_path(contact), class: "btn btn-danger" %>
+>>>>>>> f5b642ed63968df69d7c6ff0aad10b516b291333
           </div>
         <% end %>
       <% end %>
@@ -68,7 +76,11 @@
   <% end %>
     <div class="row">
       <div class="title-pages text-center">
+<<<<<<< HEAD
         <h3>Наші філіали</h3>
+=======
+        <h3>Наши филиалы</h3>
+>>>>>>> f5b642ed63968df69d7c6ff0aad10b516b291333
       </div>
     </div>
     
