@@ -15,13 +15,8 @@
 			<div class="blog-edit text-center">
 				<% if user_signed_in? %>
         			<% if current_user.id == 1 %>
-<<<<<<< HEAD
 					<p><%= link_to 'Редагувати', edit_post_path(@post), class: "btn btn-sm btn-danger" %>
 					<%= link_to 'Видалити', post_path(@post), method: :delete, data: { confirm: 'Вы уверены?'},class: "btn btn-sm btn-danger" %>
-=======
-					<p><%= link_to 'Редактировать', edit_post_path(@post), class: "btn btn-sm btn-danger" %>
-					<%= link_to 'Удалить', post_path(@post), method: :delete, data: { confirm: 'Вы уверены?'},class: "btn btn-sm btn-danger" %>
->>>>>>> f5b642ed63968df69d7c6ff0aad10b516b291333
 					<%= link_to 'Назад', root_path, class: "btn btn-sm btn-primary" %>	
 					</p>
 					<% end %>
