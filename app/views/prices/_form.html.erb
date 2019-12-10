@@ -1,0 +1,46 @@
+<div class="col-md-12">	
+	<div class="row">
+		<div class="create-edit-price">
+			<%= form_for @price, html: {multipart: true} do |f| %>
+				<% if @price.errors.any? %>
+					<div id="errors">
+						<h2><%= pluralize(@price.errors.count, "error") %> prevented this price from saving</h2>
+						<ul>
+							<% @price.errors.full_messages.each do |msg| %>
+								<li><%= msg %></li>
+							<% end %>
+						</ul>
+					</div>
+				<% end %>
+	
+	
+				<div class="form_group">
+						<%= f.text_field :title, placeholder: "Послуга", class: "form-control" %>
+				</div>
+				
+			<div class="title-pages text-center">
+				<h3>Послуги і ціни</h3>
+			</div>
+
+			 <div id='pricelists'>
+			    <%= f.fields_for :pricelists do |pricelist| %>
+			      <%= render 'pricelist_fields', :f => pricelist %>
+			    <% end %>
+			    
+			    <div class='links'>
+			      <%= link_to_add_association 'Добавити послугу', f, :pricelists, class: "btn btn-primary" %>
+			    </div>
+			</div>
+			
+			<% if user_signed_in? %>
+        	<% if current_user.id == 1 %>	
+				<div class="price-buttons text-center">
+					<p><%= f.submit class: "btn btn-danger" %>
+					<%= link_to 'Назад', edit_user_registration_path, class: "btn btn-back" %></p>
+				</div>
+			<% end %>	
+			<% end %>
+			<% end %>
+		</div>	
+	</div>	
+</div>			

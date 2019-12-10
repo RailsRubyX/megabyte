@@ -1,0 +1,43 @@
+<div class="blog-content">
+	<div class="container">
+		<div class="row">
+			<main id="main-wrapper" class="col-md-9 col-md-push-3">
+				<div class="post-content">
+					<div class="vc_row wpb_row vc_row-fluid wpb_padding">
+						<div class="wpb_column vc_column_container vc_col-sm-8">
+							<div class="wpb_wrapper">
+								<div class="wdc-heading style-1 text-left">
+									<h3 class="box-title"><%= @service.title %></h3>
+								</div>
+								<div class="wpb_text_column wpb_content_element ">
+									<p><%= @service.body %></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<aside id="sidebar-wrapper" class="col-md-3 col-md-pull-9">
+				<section id="wdc-services-wgt-1" class="widget wdc-services-wgt">
+					<% @services.each do |service| %>
+					<ul>
+						<li><%= link_to service.title, service %></li>
+					</ul>
+					<% end %>
+				</section>
+			</aside>
+		</div>	
+		<div class="blog-edit text-center">
+				<% if user_signed_in? %>
+        			<% if current_user.id == 1 %>
+					<p><%= link_to 'Редагувати', edit_service_path(@service), class: "btn btn-sm btn-danger" %>
+					<%= link_to 'Видалити', service_path(@service), method: :delete, data: { confirm: 'Вы уверены?'},class: "btn btn-sm btn-danger" %>
+					<%= link_to 'Назад', root_path, class: "btn btn-sm btn-primary" %>	
+					</p>
+					<% end %>
+				<% end %>	
+		</div>
+	</div>
+</div>
+<div class="enpty_space"></div>
+<div class="enpty_space"></div>

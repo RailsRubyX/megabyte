@@ -1,0 +1,65 @@
+<div class="edit-registration">
+  <div class="col-md-4 col-md-offset-4">
+      <div class="row">
+        <div class="panel-heading text-center">
+          <h2>Редагування даних аккаунта</h2>
+        </div>  
+
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      
+      <div class="form_group">
+        <%= f.label :Мене_звати %><br />
+        <%= f.text_field :name, autofocus: true, class: "form-control" %>
+      </div>
+     <br>
+      <div class="form_group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+      </div>
+    <br>
+      <div class="form_group">
+        <%= f.label :Мобільний_телефон %><br />
+        <%= f.telephone_field :phone, autofocus: true, class: "form-control" %>
+      </div>
+    <br>
+      <div class="form_group">
+        <%= f.label :Адреса %><br />
+        <%= f.text_area :adress, autofocus: true, class: "blog-text-area form-control" %>
+      </div>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+    <br>
+      <div class="form_group">
+        <%= f.label :Новий_пароль %> <i>(Якщо не хочете змінювати пароль, залиште поле порожнім)</i><br />
+        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+        <% if @minimum_password_length %>
+          
+          <em><%= @minimum_password_length %> символів мінімум</em>
+        <% end %>
+      </div>
+    <br>
+      <div class="form_group">
+        <%= f.label :Підтвердження_нового_паролю %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+      </div>
+    <br>
+      <div class="form_group">
+        <%= f.label :Дійсний_пароль %> <i>(Введіть дійсний пароль для збереження змін)</i><br />
+        <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
+      </div>
+    <br>
+      <div class="actions">
+        <%= f.submit "Оновити", class: "btn btn-danger" %>
+        <%= link_to "Назад", :back, class: "btn btn-primary"%>
+      </div>
+    <% end %>
+
+    <h3>Видалення аккаунта</h3>
+
+    <%= button_to "Видалити аккаунт", registration_path(resource_name), class: "btn btn-primary", data: { confirm: "Are you sure?" }, method: :delete %>
+    </div>
+  </div>
+</div>

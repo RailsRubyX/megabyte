@@ -1,0 +1,50 @@
+<%# byebug %>
+
+<% if @details_u.first %>
+
+	<div class="row" >
+		<div class="col-xs-6 col-sm-1">  </div>
+		<div class="col-xs-6 col-sm-7" style="padding: 0px 140px; background-color: gainsboro">
+			Послуги
+		</div>
+	</div>
+
+	<% @details_u.each do |row_det|%>
+				<%# byebug %>
+				<div class="row">
+					<div class="col-xs-6 col-sm-1">  </div>
+					<div class="col-xs-6 col-sm-5"><%= row_det["Descr"] %> </div>
+					<div class="col-xs-6 col-sm-1"><%= row_det["Kol"] %> шт.</div>
+					<div class="col-xs-6 col-sm-3"><%= row_det["Summa"] %> грн.</div>
+					
+				</div>
+	<% end %>
+
+<% end %> <!-- there are service records -->
+
+
+<%# byebug %>
+<% if @details_t.first %>
+
+	<div class="row"> 
+		<div class="col-xs-6 col-sm-1">  </div>
+		<div class="col-xs-6 col-sm-7" style="padding: 0px 140px; background-color: gainsboro">
+			Товари
+		</div>
+		
+	</div>
+
+	<% @details_t.each do |row_det|%>
+				<%# byebug %>
+				<div class="row">
+					<div class="col-xs-6 col-sm-1">  </div>
+					<div class="col-xs-6 col-sm-5"><%= row_det["Descr"] %> </div>
+					<div class="col-xs-6 col-sm-1"><%= row_det["Kol"] %> шт.</div>
+					<div class="col-xs-6 col-sm-3"><%= row_det["Summa"] %> грн.</div>
+					
+				</div>
+	<% end %>
+
+<% end %> <!-- there are products entries -->
+
+<br>

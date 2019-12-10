@@ -1,0 +1,29 @@
+	<div class="row">
+		<div class="col-xs-7 col-sm-1 text-center table-margin" > <strong>Дата</strong> </div>
+		<div class="col-xs-7 col-sm-1 text-center table-margin" > <strong>Замовлення</strong> </div>
+		<div class="col-xs-7 col-sm-2 text-center table-margin" > <strong>Статус</strong> </div>
+		<div class="col-xs-7 col-sm-3 text-center table-margin" > <strong>Менеджер</strong> </div>
+		<div class="col-xs-7 col-sm-3 text-center table-margin" > <strong>Майстер</strong> </div>
+		<div class="col-xs-7 col-sm-1 text-center table-margin" > <strong>Сума,грн.</strong> </div>
+		<!--div class="col-xs-7 col-sm-1" > Акт </div-->
+	</div>
+
+	<% @list.each do |row| %>
+
+		<div class="row" style="<%= cycle("background: #e0f8f8;","background: #ffffff;") %>">
+			<div class="col-xs-7 col-sm-1 table-margin"> <%= row["_Date_Time"].strftime("%d.%m.%Y") %> </div>
+			<div class="col-xs-7 col-sm-1 table-margin"> <%= row["_Number"]%> <br> <%= link_to "Показати", cabinet_show_order_path(row["_IDRRef"]), id: "link"+row["_IDRRef"], remote: true %> 
+				<%= link_to "Приховати", cabinet_show_path(row["_IDRRef"]), id: "l"+row["_IDRRef"], hidden: true, remote: true %></div>
+			<div class="col-xs-7 col-sm-2 table-margin"> <%= OrderList.description_status(row["Status"]) %>  </div>
+			<div class="col-xs-7 col-sm-3 table-margin"> <%= row["Manager"] %> </div>
+			<div class="col-xs-7 col-sm-3 table-margin"> <%= row["Master"] %> </div>
+			<div class="col-xs-7 col-sm-1 table-margin"> <%= row["Summa"] %> </div>
+			<!--div class="col-xs-7 col-sm-1"> <a href="assets/Akt.pdf">Акт в PDF</a> </div-->
+		</div>
+
+		<div id="<%=row["_IDRRef"]%>" style="display: none">
+
+		</div>
+
+	<% end %>
+<div class="enpty_space"></div>	

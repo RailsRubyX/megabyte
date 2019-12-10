@@ -1,0 +1,18 @@
+Rails.application.routes.draw do
+  devise_for :users
+<<<<<<< HEAD
+  
+  resources :posts
+  
+  root "posts#index"
+=======
+  get 'cabinet/view'
+  root "pages#index"
+>>>>>>> 79bbb99d0c0fe627144b42f6a5c529972b2646b1
+
+  get '/about', to: 'pages#about'
+  get '/contacts', to: 'pages#contacts'
+  get '/pricelist', to: 'pages#pricelist'
+  get '/clients', to: 'pages#clients'
+  get '/service', to: 'pages#service'
+end

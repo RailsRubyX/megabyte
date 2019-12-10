@@ -1,0 +1,11 @@
+
+//$('#<%=params[:cabinet_id]%>').toggle()
+$('#<%=params[:cabinet_id]%>').show()
+
+if ($('#<%=params[:cabinet_id]%> div').length == 0) { $('#<%=params[:cabinet_id]%>').html("<%= j render("details") %>"); }
+
+if ($('#<%=params[:cabinet_id]%>').is(':visible')) {
+    // виден
+$('#<%="link"+params[:cabinet_id]%>').hide()
+$('#<%="l"+params[:cabinet_id]%>').show()
+}

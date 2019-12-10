@@ -1,0 +1,43 @@
+<section class="blog-area single-padding"> 
+	<div class="container animated" style="visibility: visible; animation-name: fadeInUp;">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="blog-title-index text-center">
+          <h1 class="box-title">Чому вибирають нас?</h1>
+          <div class="box-content">
+          <p >Our company is reliable, and our work is trusted. We provide worry-free service you can always count on.</p></div>
+        </div>
+      </div>
+    </div>
+		<div class="row">
+			<% @posts.each do |post| %>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="single-recent-news">
+						<div class="recent-news-img">
+							<%= link_to post do %>
+								<%= image_tag post.image.url(:thumb), class: "img-responsive img-thumbnail" %>
+							<% end %>
+						</div>
+						<div class="recent-news-desc">
+							<h4><%= link_to post.title, post %></h4>	
+							<div class="box">
+								<div>
+									<p><%= post.body %></p>
+                  					<script src="jquery.dotdotdot.min.js"></script>
+								</div>
+							</div>
+							<%= link_to "Детальніше", post, class: "wdc-button style-1 size-medium" %>
+						</div>
+					</div>
+				</div>	
+			<% end %>
+		</div>	
+	</div>
+</section>
+
+
+<script>
+$(function(){
+  $('.box').dotdotdot();
+});
+</script>

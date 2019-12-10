@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="row">
+		<div class="title-pages text-center">
+			<h3>Создание контактов</h3>
+		</div>
+		<% if Contact.count >= 1 %>
+			<p class="text-center"><strong>Контакты уже созданы! Можно только редактировать!</strong></p>
+		<% else %>	
+			<%= render 'form', contact: @contact %>
+		<% end %>	
+	</div>	
+</div>

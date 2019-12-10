@@ -1,0 +1,5 @@
+<% if current_user.id == 1 %>
+  <%= render 'adminpage' %>
+<% else %>
+  <%= render 'userpage' %>
+<% end %>  

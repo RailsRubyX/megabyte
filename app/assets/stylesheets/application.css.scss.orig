@@ -1,0 +1,443 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require_tree .
+ *= require_self
+ *= require bootstrap-social
+ *= require font-awesome
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-social";
+							   
+							
+body {
+	margin-bottom: 40px;
+}
+
+
+
+
+                                                     /*Раздел Header*/
+
+.repair-header-top {
+    line-height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    .repair-col-logo {
+        position: relative;
+        .megabyte-logo {
+            line-height: 105px;
+            img {
+            vertical-align: middle !important;
+            }
+        }
+    }
+    
+    .repair-icon-box {
+        line-height: 19px;
+        margin-top: 15px;
+        padding-left: 35px;
+        position: relative;
+        margin-top: 32px;
+        
+        .icon-container {
+            font-size: 30px;
+            left: 0;
+            position: absolute;
+            top: 15%;
+        }
+        
+        .text {
+          font-size: 16px;
+          letter-spacing: .03px;
+            .head-heading{
+                font-size: 15px;
+                line-height: 20px;
+                display: block;
+            }
+            .head-content{
+                display: block;
+                font-weight: 600;
+                color: #2196F3; 
+            }
+       }
+   }
+    
+    .btn-quote {
+        float: right;
+        margin-top: 32px;
+          .btn-request_quote{
+                font-weight: 600;
+                color: white;
+                text-align: center;
+                padding: 12px 14px;
+                background-color: #2196F3;
+                &:hover{
+                    background: darken(black, 10%);
+                }
+
+            }
+        }  
+}
+
+@media only screen and (min-width:991px) and (max-width: 1200px)  {
+    
+    .repair-header-top {
+
+        .repair-icon-box {
+            .icon-container {
+                font-size: 25px;
+            }
+            .text {
+              font-size: 13px;
+                .head-heading{
+                    font-size: 13px;
+                }
+           }
+       }
+        .btn-quote {
+              .btn-request_quote{
+                    font-size: 12px;
+                    padding: 12px 3px;
+                }
+            }
+
+    }
+}
+@media only screen and (max-width: 991px) {
+    
+    .repair-header-top {
+        .megabyte-logo {
+            text-align: center;
+            }
+    }
+}
+
+                /* цвет фона и рамки навигационного меню */
+.navbar{
+  margin:0;
+  border: none;
+  position:relative;
+  min-height:50px;
+  border-radius: 0;
+}
+
+.navbar-default {
+    background-color: #1D1D1D;
+}
+
+#navbar-main {
+  .navbar-nav{
+    a{
+      color: white;
+    }
+
+    a:hover{
+    color: #1c73ff;
+    }
+  }
+  .dropdown-menu{
+    a{
+      color: black;
+    }
+  }
+}
+
+								/* Страничка О нас */
+.main-content {
+  padding-top: 20px;
+	.title {
+	  text-align: center;
+	} 
+
+	p {
+    text-indent: 20px;          /* Отступ первой строки в пикселах */
+   }
+}
+
+div.comanda{
+ margin:60px 0 0;
+ display:-webkit-flex;
+ flex-wrap:wrap;
+ justify-content:center
+}
+.comanda_person {
+ flex-basis:20%;
+ display:flex;
+ height:150px;
+ align-items:center;
+ justify-content:center
+}
+
+div.comanda-title{
+	text-align: center;
+}
+								/* Страничка О нас */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #1D1D1D;
+  color: white;
+  p {
+  	margin-top: 10px;
+  }
+}
+								                            /* Страничка Сервис */
+
+div.service {
+	p {
+    text-indent: 20px;          /* Отступ первой строки в пикселах */
+   }
+}					
+
+
+.blog-area .single-recent-news {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.recent-news-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+    position: relative;
+    width: 100%;
+}
+
+
+                                        /*Обрезка текста блога и троеточие в конце*/
+.box {
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    line-height: 25px;
+}
+
+
+                                         /*Обрезка текста блога и троеточие в конце*/
+
+
+.recent-news-desc h4 a:hover{
+    color: #ed1556
+}
+
+.recent-news-desc h4 {
+    height: 60px;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    padding-bottom: 18px;
+    position: relative;
+    text-transform: none;
+    font-weight: 700;
+}
+.recent-news-desc h4::before {
+    background: #2196F3 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left: -22px;
+    position: absolute;
+    width: 44px;
+}
+
+.recent-news-desc {
+  margin-bottom: 21px;
+}
+
+.blog-title-index {
+  margin-bottom: 20px;
+  h1 {
+    height: 30px;
+    display: block;
+    font-size: 20px;
+    position: relative;
+    text-transform: none;
+    font-weight: 700;
+    }
+}
+
+.blog-title-index h1::before {
+   background: #2196F3 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left: -22px;
+    position: absolute;
+    width: 44px;
+}
+
+.title-pages {
+  margin-bottom: 20px;
+  h3 {
+    height: 30px;
+    display: block;
+    font-size: 20px;
+    position: relative;
+    text-transform: none;
+    font-weight: 700;
+    }
+}
+
+.title-pages h3::before {
+   background: #2196F3 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left: -22px;
+    position: absolute;
+    width: 44px;
+}
+
+
+.blog-img {
+  display: block;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 20px;
+}
+
+#post_body{
+  height: 300px;
+}
+
+.blog-body {
+  p {
+    white-space: pre-wrap;
+    width: 75%;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+}
+
+.carousel{
+  margin-bottom: 30px;
+}
+
+.service {
+  padding-top: 20px;
+}
+
+.clients_content {
+  padding-top: 20px;
+}
+
+.orders {
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+.contacts {
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+.edit-registration {
+  .row{
+  margin-bottom: 50px;}
+}
+.new-registration { 
+  .row{
+  margin-bottom: 50px;}
+}
+
+#user_adress {
+  height: 100px;
+  resize: none;
+}
+
+
+.location-class {
+        line-height: 19px;
+        margin-top: 15px;
+        padding-left: 35px;
+        position: relative;
+        margin-top: 32px;
+        .icon-container {
+            font-size: 30px;
+            left: 0;
+            position: absolute;
+            top: 10%;
+        }
+        
+        .text {
+          font-size: 16px;
+          letter-spacing: .03px;
+            .head-heading{
+                font-size: 15px;
+                line-height: 20px;
+                display: block;
+            }
+            .head-content{
+                display: block;
+                font-weight: 600;
+                color: #2196F3; 
+            }
+       }
+}
+
+<<<<<<< HEAD
+
+                                                     /*Счетчик на главной странице*/
+.counter
+{
+    background-color: #009CFF;
+    text-align: center;
+    color:#ffffff;
+}
+.employees,.customer,.design,.order
+{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.counter-count
+{
+    box-sizing: border-box;
+  display: block;
+float: none;
+line-height: 40px;
+position: static;
+z-index: auto;
+font-weight: bold;
+font-size: 2.5em;
+}
+
+.employee-p,.customer-p,.order-p,.design-p
+{
+    font-size: 1.5em;
+    color:#ffffff;
+    line-height: 34px;
+    font-weight: 100;
+}  
+=======
+.admin_title {
+  margin-bottom: 5px;
+}
+>>>>>>> 8e26838d1cf70ce0a2a076cda909fac6bb4b151b
