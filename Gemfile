@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 #Adding by Sergowa
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails'
-gem 'devise', '~> 4.4', '>= 4.4.1'
+gem 'devise', '~> 4.7'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
