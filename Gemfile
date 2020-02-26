@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 #Adding by Sergowa
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'bootstrap-sass', '~> 3.4'
 gem 'jquery-rails'
 gem 'devise', '~> 4.4', '>= 4.4.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
